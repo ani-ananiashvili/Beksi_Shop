@@ -6,8 +6,9 @@
   width: 100%;
   gap: 500px;
   align-items: center;
-
-  background-color: rgb(169, 195, 241);
+  
+  padding: 10px;
+  margin-bottom: 15px;
 }
 
 .logo {
@@ -28,6 +29,7 @@
 ul {
   display: flex;
   gap: 70px;
+
 }
 
 nav,
@@ -54,6 +56,10 @@ ul li a:hover::after {
 
 /* registration */
 
+.registrationSection {
+  margin-left: 10px;
+}
+
 .registration {
   display: flex;
   flex-direction: column;
@@ -69,4 +75,19 @@ ul li a:hover::after {
   font-size: 15px;
   color: black;
   border-radius: 20px;
+}
+
+
+
+
+
+/* footer section */
+
+
+footer div a img {
+  width: 45px;
+  height: 40px;
+
+
+  margin: 400px 0px 0px 10px;
 }
