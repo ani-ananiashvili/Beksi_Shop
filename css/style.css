@@ -78,6 +78,20 @@ ul li a:hover::after {
 }
 
 
+/* product section */
+.productSection {
+margin-top: 30px;
+
+  display: flex;
+  gap:5px;
+}
+
+.productSection img {
+  width: 550px;
+  height: 350px;
+}
+
+
 
 
 
@@ -89,5 +103,5 @@ footer div a img {
   height: 40px;
 
 
-  margin: 400px 0px 0px 10px;
+  margin: 50px 0px 0px 10px;
 }
