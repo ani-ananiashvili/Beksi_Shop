@@ -87,8 +87,8 @@ ul li a:hover::after {
 }
 
 .option {
-  display: flex;
-  justify-content: center;
+   display: flex; 
+   justify-content: center; 
 }
 
 .productImages {
@@ -110,4 +110,9 @@ footer div a img {
   height: 40px;
 
   margin: 50px 0px 0px 10px;
+}
+
+footer {
+  padding-top: 60px;
+  display: flex;
 }
