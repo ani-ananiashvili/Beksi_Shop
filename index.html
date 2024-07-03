@@ -21,13 +21,39 @@
       <nav>
         <ul>
           <li><a href="#">მთავარი</a></li>
+          <li><a href="#">კატეგორია</a></li>
           <li><a href="#">ჩვენს შესახებ</a></li>
           <li><a href="#">საკონტაქტო</a></li>
         </ul>
       </nav>
+      <div class="headerIcons">
+        <a href="#"><img src="images/user.s.svg" alt="icon" /></a>
+        <a href="#"><img src="images/heart.svg" alt="icon" /></a>
+      </div>
     </header>
+
+    <!-- search section -->
+
     <section>
-      <form action="#" class="formElements">
+      <div class="searchSection">
+        <form action="search" method="get">
+          <div class="form">
+            <input
+              class="form"
+              name="searchText"
+              type="search"
+              placeholder="პროდუქციის ძებნა"
+              value=""
+            />
+            <button class="searchButton">ძებნა</button>
+          </div>
+        </form>
+        <div>
+          <a href="#"><img class="cartImage" src="images/cart-arrow-down.svg" alt="image" /></a>
+        </div>
+      </div>
+
+      <!-- <form action="#" class="formElements">
         <div class="registration">
           <label for="email">ელ-ფოსტა</label>
           <input
@@ -51,13 +77,13 @@
           />
         </div>
         <button type="submit">შესვლა</button>
-      </form>
+      </form> -->
     </section>
 
     <!-- product section -->
 
     <section class="productSection">
-      <div class="option">
+      <!-- <div class="option">
         <label for="option">კატეგორია: </label>
         <select id="accessories">
           <option value="ring">ბეჭედი</option>
@@ -65,7 +91,7 @@
           <option value="necklace">ყელსაბამი</option>
           <option value="bracelet">სამაჯური</option>
         </select>
-      </div>
+      </div> -->
       <div class="productImages">
         <div>
           <img src="images/snake-ring1.PNG" alt="image" />
@@ -133,11 +159,6 @@
           <p>ფასი: 5 ლარი</p>
         </div>
         <div>
-          <img src="images/snake-ring14.PNG" alt="image" />
-          <p>ბეჭედი</p>
-          <p>ფასი: 5 ლარი</p>
-        </div>
-        <div>
           <img src="images/snake-ring15.PNG" alt="image" />
           <p>ბეჭედი</p>
           <p>ფასი: 5 ლარი</p>
@@ -149,11 +170,6 @@
         </div>
         <div>
           <img src="images/snake-ring17.PNG" alt="image" />
-          <p>ბეჭედი</p>
-          <p>ფასი: 5 ლარი</p>
-        </div>
-        <div>
-          <img src="images/snake-ring18.PNG" alt="image" />
           <p>ბეჭედი</p>
           <p>ფასი: 5 ლარი</p>
         </div>
@@ -172,6 +188,7 @@
         <a href="https://www.instagram.com/onlineshopbeksi/" target="_blank"
           ><img src="images/instagram.svg" alt="instagram.com"
         /></a>
+        <p>© 2024 Beksi, All rights reverved</p>
       </div>
     </footer>
   </body>

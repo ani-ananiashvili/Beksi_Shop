@@ -4,11 +4,21 @@
   display: flex;
   margin: 0 auto;
   width: 100%;
-  gap: 500px;
+  justify-content: space-between;
   align-items: center;
 
-  padding: 10px;
+  padding: 15px;
   margin-bottom: 15px;
+}
+
+.headerIcons {
+  display: flex;
+  gap: 40px;
+}
+
+.headerIcons img {
+  width: 20px;
+  height: 20px;
 }
 
 .logo {
@@ -53,9 +63,40 @@ ul li a:hover::after {
   width: 100%;
 }
 
+
+/* search form */
+
+.searchSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.form {
+  display: flex;
+  width: 500px;
+  height: 40px;
+}
+
+.searchButton {
+  width: 100px;
+  color: rgb(246, 244, 244);
+  background-color: rgb(49, 80, 201);
+}
+
+.cartImage {
+  width: 40px;
+  height: 40px;
+}
+
+
+
+
+
 /* registration */
 
-.registrationSection {
+/* .registrationSection {
   margin-left: 10px;
 }
 
@@ -74,7 +115,7 @@ ul li a:hover::after {
   font-size: 15px;
   color: black;
   border-radius: 20px;
-}
+} */
 
 /* product section */
 .productSection {
@@ -115,4 +156,9 @@ footer div a img {
 footer {
   padding-top: 60px;
   display: flex;
+}
+
+footer div p {
+  display: flex;
+  justify-content: center;
 }
