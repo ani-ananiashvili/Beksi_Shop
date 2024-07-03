@@ -13,7 +13,7 @@
 
 .headerIcons {
   display: flex;
-  gap: 40px;
+  gap: 30px;
 }
 
 .headerIcons img {
@@ -63,14 +63,13 @@ ul li a:hover::after {
   width: 100%;
 }
 
-
 /* search form */
 
 .searchSection {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
 }
 
 .form {
@@ -89,10 +88,6 @@ ul li a:hover::after {
   width: 40px;
   height: 40px;
 }
-
-
-
-
 
 /* registration */
 
@@ -117,7 +112,6 @@ ul li a:hover::after {
   border-radius: 20px;
 } */
 
-
 /* product section */
 
 .productSection {
@@ -137,8 +131,8 @@ ul li a:hover::after {
 }
 
 .option {
-   display: flex; 
-   justify-content: center; 
+  display: flex;
+  justify-content: center;
 }
 
 .productImages {
@@ -158,13 +152,12 @@ ul li a:hover::after {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
-  }
-  
-  .showMore button {
-    width: 200px;
-    height: 40px;
-  }
-  
+}
+
+.showMore button {
+  width: 200px;
+  height: 40px;
+}
 
 /* image section */
 
@@ -173,14 +166,14 @@ ul li a:hover::after {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-bottom: 50px;
 }
 
 .imageTxt {
   display: flex;
   flex-direction: column;
   text-align: center;
-gap: 30px;
-
+  gap: 30px;
 }
 
 .imageTxt span {
@@ -196,9 +189,42 @@ gap: 30px;
   height: 30px;
 }
 
+/* send me section */
 
+.sendMe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
 
+  background-color: rgb(209, 204, 213);
+}
 
+.sendMeAll {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.enterSubsc {
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column; */
+  gap: 15px;
+}
+
+.enter {
+  width: 350px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.sub {
+  width: 90px;
+  height: 40px;
+  border-radius: 20px;
+}
 
 /* footer section */
 
@@ -206,15 +232,23 @@ footer div a img {
   width: 45px;
   height: 40px;
 
-  margin: 50px 0px 0px 10px;
-}
+  margin: 30px 0px 30px 0px;
+ }
 
 footer {
-  padding-top: 60px;
+  padding: 20px;
   display: flex;
 }
 
-footer div p {
+.lastFooter {
   display: flex;
-  justify-content: center;
+  gap: 5px;
+}
+
+.lastFooter img {
+  width: 15px;
+}
+
+.lastFooter span {
+  margin-right: 1100px;
 }
