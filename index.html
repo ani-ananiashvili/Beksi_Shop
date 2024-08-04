@@ -14,9 +14,9 @@
     <!-- header section -->
 
     <section class="mainLogo">
-        <a href="index.html"
-          ><img class="beksi" src="images/beksi.jpg" alt=""
-        /></a>
+      <a href="index.html"
+        ><img class="beksi" src="images/beksi.jpg" alt=""
+      /></a>
     </section>
 
     <header>
@@ -31,7 +31,10 @@
         </ul>
         <div class="responsiveIcons">
           <div class="headerIcons">
-            <a href="#"><img src="images/skull.svg" alt="icon" /></a>
+            <a href="#" id="registrationIcon">
+              <img src="images/skull.svg" alt="icon" />
+              <span class="tooltip" style="display: none">Registration</span>
+            </a>
             <a href="#"><img src="images/heart.png" alt="icon" /></a>
           </div>
           <div class="hamburger">
@@ -41,121 +44,156 @@
           </div>
         </div>
       </nav>
-    </header>
 
-    <!-- search section
+      <!-- registration -->
 
-    <section>
-      <div class="searchSection">
-        <form action="search" method="get">
-          <div class="form">
-            <input
-              class="form"
-              name="searchText"
-              type="search"
-              placeholder="Production Search"
-              value=""
-            />
-            <button class="searchButton">search</button>
+      <div id="registrationOverlay" class="overlay" style="display: none">
+        <div class="registrationFormContainer">
+          <div class="formHeader">
+            <h2>Registration</h2>
+            <button id="closeForm" class="closeButton">&times;</button>
           </div>
-        </form>
-        <div>
-          <a href="#"
-            ><img
-              class="cartImage"
-              src="images/cart-arrow-down.svg"
-              alt="image"
-          /></a>
+          <form>
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Password" required />
+            <button type="submit">Register</button>
+          </form>
         </div>
       </div>
+    </header>
 
-      <form action="#" class="formElements">
-        <div class="registration">
-          <label for="email">ელ-ფოსტა</label>
-          <input
-            class="inputElement"
-            type="text"
-            id="email"
-            name="user"
-            placeholder="Email"
-            required
-          />
-        </div>
-        <div class="registration">
-          <label for="passw">პაროლი</label>
-          <input
-            class="inputElement"
-            type="password"
-            id="passw"
-            name="userPassword"
-            placeholder="Password"
-            required
-          />
-        </div>
-        <button type="submit">შესვლა</button>
-      </form>
-    </section> -->
+    <!-- lighting animation & search -->
+
+    <div class="video-container">
+      <video
+        id="lightningVideo"
+        autoplay
+        muted
+        loop
+        playsinline
+        disablePictureInPicture
+      >
+        <source src="images/thunder_Effect_Videos.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="search-form" id="searchForm">
+        <input type="text" placeholder="Search..." />
+        <button type="submit">Search</button>
+      </div>
+    </div>
 
     <!-- product section -->
 
-    <!-- <section class="productSection">
+    <section class="productSection">
       <div class="productImages">
-        <img class="fullImage" src="images/stop.jpg" alt="image" />
-        <img class="fullImage" src="images/gza.jpg" alt="image" />
-        <img class="fullImage" src="images/stop.jpg" alt="image" />
-        <img class="fullImage" src="images/gza.jpg" alt="image" />
-      </div>
-      <div class="showMore">
-        <button>Show More</button>
-      </div>
-    </section> -->
-
-    <!-- send me section -->
-
-    <!-- <section class="sendMe">
-      <div class="sendMeAll">
-        <p>
-          Yes! Send me exclusive offers, unique gift ideas, and personalized
-          tips for shopping and selling on Beksi.
-        </p>
-        <div class="enterSubsc">
-          <div>
-            <input
-              class="enter"
-              id=""
-              placeholder="Enter your email"
-              name="email_address"
-            />
-          </div>
-          <div>
-            <button type="submit" class="sub">Subscribe</button>
-          </div>
+        <div class="imageContainer">
+          <a href="#">
+            <img class="fullImage" src="images/stop.jpg" alt="image" />
+            <div class="overlay">RINGS</div>
+          </a>
+        </div>
+        <div class="imageContainer">
+          <a href="#">
+            <img class="fullImage" src="images/gza.jpg" alt="image" />
+            <div class="overlay">EARRINGS</div>
+          </a>
+        </div>
+        <div class="imageContainer">
+          <a href="#">
+            <img class="fullImage" src="images/stop.jpg" alt="image" />
+            <div class="overlay">NECKLACES</div>
+          </a>
+        </div>
+        <div class="imageContainer">
+          <a href="#">
+            <img class="fullImage" src="images/gza.jpg" alt="image" />
+            <div class="overlay">CHAINS</div>
+          </a>
         </div>
       </div>
-    </section> -->
+    </section>
 
     <!-- footer section -->
-    <!-- 
-    <footer>
-      <div>
-        <div class="mediaDiv">
-          <a
-            href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSHwfPjTmrbdBqfcwnpBSVmfqPwsRxpLZKXQbmkqvJwdgQvcMjNCkHXvHvgtsgXnBvmrpSWN"
-            target="_blank"
-            ><img src="images/gmail.svg" alt="gmail.com"
+
+    <footer class="footer">
+      <div class="mediaText">
+        <div>
+          <div class="footerLogo">
+            <a href="#"><img src="images/beksi.jpg" alt="logo" /></a>
+          </div>
+          <p class="mediaP">
+            Contrary to popular belief, Lorem Ipsum is not simply random text.
+            It has roots in a piece of classical Latin literature from 45 BC.
+          </p>
+        </div>
+        <div class="socMedia">
+          <a href="https://www.facebook.com/" target="_blank"
+            ><img src="images/facebook.png" alt="facebook"
           /></a>
-          <a href="https://www.instagram.com/onlineshopbeksi/" target="_blank"
-            ><img src="images/instagram.svg" alt="instagram.com"
+          <a href="https://www.instagram.com/" target="_blank"
+            ><img src="images/instagram.png" alt="instagram"
+          /></a>
+          <a href="https://www.gmail.com/" target="_blank"
+            ><img src="images/email.png" alt="gmail"
           /></a>
         </div>
-        <div class="lastFooter">
+      </div>
+      <div class="fullNav">
+        <nav class="footerNavigation">
+          <ul>
+            <li>
+              <a href="#">
+                <h4>Company</h4>
+              </a>
+            </li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Career</a></li>
+            <li><a href="#">Mobile</a></li>
+          </ul>
+        </nav>
+        <nav class="footerNavigation">
+          <ul>
+            <li>
+              <a href="#">
+                <h4>Contact</h4>
+              </a>
+            </li>
+            <li><a href="#">Why Travlog?</a></li>
+            <li><a href="#">Partner with us</a></li>
+            <li><a href="#">FAQ's</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </nav>
+        <nav class="footerNavigation">
+          <ul>
+            <li>
+              <a href="#">
+                <h4>Meet Us</h4>
+              </a>
+            </li>
+            <li><a href="#">+00 92 1234 56789</a></li>
+            <li><a href="#">info@travlog.com</a></li>
+            <li><a href="#">205. R Street, New York</a></li>
+            <li><a href="#">BD23200</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- footer section -->
+    
+    <footer class="lastFooter">
+   
+        <div class="lastFooterDiv">
+          <div>
           <img src="images/earth-europe-solid.svg" alt="icon" />
           <span>Georgia</span>
+        </div>
           <p>&copy; 2024 Beksi, All rights reverved</p>
         </div>
         <i class="fa-brands fa-facebook"></i>
       </div>
-    </footer> -->
+    </footer>
     <script src="JS/script.js"></script>
   </body>
 </html>
