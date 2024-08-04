@@ -1,25 +1,21 @@
+body {
+  background-color: rgb(113, 113, 113);
+  color: white;
+}
+
 /* header section */
-.beksidiv {
-  padding-top: 15px;
+.mainLogo {
+  padding: 15px;
   display: flex;
   justify-content: center;
 }
 
 .beksi {
-  width: 150px;
-  height: 70px;
-  margin-bottom: 10px;
+  width: 100px;
 }
 
-.headerSection {
-  display: flex;
-  margin: 0 auto;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 15px;
-  margin-bottom: 15px;
+header a img {
+  width: 50px;
 }
 
 .headerIcons {
@@ -27,53 +23,111 @@
   gap: 30px;
 }
 
-.headerIcons img {
-  width: 20px;
-  height: 20px;
+.headerIcons a img {
+  width: 50px;
 }
 
-.logo {
+a {
+  color: white;
+}
+
+.nav-bar {
+  min-height: 70px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 5px;
+  padding: 0 30px;
 }
 
-.logo img {
-  width: 7%;
-}
-
-ul {
+.nav-menu {
   display: flex;
-  gap: 70px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
 }
 
-nav,
-ul li,
-ul li a {
+.nav-bar img {
+  width: 70px;
+}
+
+.nav-link {
   position: relative;
-  color: black;
 }
 
-ul li a::after {
+.nav-link::after {
   content: "";
   height: 1px;
   width: 0%;
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: #070707dc;
+  background-color: white;
   transition: all 1s;
 }
 
-ul li a:hover::after {
+.nav-link:hover::after {
   width: 100%;
 }
 
-.burgerMenu {
-  width: 30px;
-  height: 30px;
+.hamburger {
   display: none;
+  cursor: pointer;
 }
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+.responsiveIcons {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+/* header section => responsive */
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: rgb(113, 113, 113);
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-item {
+    margin: 16px 0px;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+}
+
 
 /* search form */
 
@@ -129,6 +183,10 @@ ul li a:hover::after {
 
 /* product section */
 
+.productImages :nth-child(1) {
+  margin-bottom: 100px;
+}
+
 .productSection {
   margin-top: 30px;
   max-width: 1800px;
@@ -163,10 +221,10 @@ ul li a:hover::after {
   height: 300px;
 }
 
-/* .productSection img:hover {
+.productSection img:hover {
   opacity: 90%;
   transition: all 0.7s;
-} */
+}
 
 .showMore {
   display: flex;
