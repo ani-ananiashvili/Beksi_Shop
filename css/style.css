@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(113, 113, 113);
+  background-color: rgb(0, 0, 0);
   color: white;
 }
 
@@ -12,20 +12,25 @@ body {
 }
 
 .beksi {
-  width: 100px;
+  width: 200px;
 }
 
-header a img {
-  width: 50px;
+.nav-bar img {
+  width: 60px;
 }
 
 .headerIcons {
   display: flex;
-  gap: 30px;
+  align-items: center;
+  gap: 20px;
 }
 
-.headerIcons a img {
-  width: 50px;
+.skull-img img {
+  width: 30px;
+}
+
+.heart-img img {
+  width: 45px;
 }
 
 a {
@@ -37,7 +42,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
+  padding: 0 25px 0 20px;
 }
 
 .nav-menu {
@@ -45,10 +50,6 @@ a {
   justify-content: space-between;
   align-items: center;
   gap: 30px;
-}
-
-.nav-bar img {
-  width: 70px;
 }
 
 .nav-link {
@@ -194,10 +195,10 @@ a {
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 70px;
+    top: 0px;
     gap: 0;
     flex-direction: column;
-    background-color: rgb(113, 113, 113);
+    background-color: black;
     width: 100%;
     margin-top: 10px;
     text-align: center;
@@ -227,6 +228,7 @@ video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: 1;
 }
 
 .search-form {
@@ -284,15 +286,20 @@ video {
 }
 
 .overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  opacity: 0;
-  transition: opacity 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.overlay.active {
+  display: flex;
 }
 
 .imageContainer:hover .overlay {
@@ -325,7 +332,8 @@ video {
 
 .socMedia {
   display: flex;
-  gap: 32px;
+  align-items: center;
+  gap: 25px;
 }
 
 .socMedia a img {
@@ -355,6 +363,19 @@ video {
   font-family: "CircularStd-700";
   font-size: 23px;
   line-height: 27.6px;
+  position: relative;
+  display: inline;
+}
+
+.footerNavigation ul li a h4::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.9px;
+  background: white;
+  position: absolute;
+  left: 1px;
+  bottom: -6px;
 }
 
 /* footer  responsive */
@@ -419,6 +440,7 @@ video {
 .lastFooter {
   display: flex;
   padding: 40px;
+  border-top: 1px solid white;
 }
 
 .lastFooter img {

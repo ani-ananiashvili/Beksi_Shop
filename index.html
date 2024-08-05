@@ -15,27 +15,27 @@
 
     <section class="mainLogo">
       <a href="index.html"
-        ><img class="beksi" src="images/beksi.jpg" alt=""
+        ><img class="beksi" src="images/beksi1.svg" alt="logo"
       /></a>
     </section>
 
     <header>
       <nav class="nav-bar">
-        <a href="#"><img src="images/B.jpg" alt="logo" /></a>
+        <a href="#"><img src="images/B2copy.png" alt="logo" /></a>
         <ul class="nav-menu">
           <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">CATEGORIES</a></li>
+          <li class="nav-item"><a href="categories.html" target="_blank" class="nav-link">CATEGORIES</a></li>
           <li class="nav-item"><a href="#" class="nav-link">SALE</a></li>
           <li class="nav-item"><a href="#" class="nav-link">ABOUT US</a></li>
           <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
         </ul>
         <div class="responsiveIcons">
           <div class="headerIcons">
-            <a href="#" id="registrationIcon">
-              <img src="images/skull.svg" alt="icon" />
+            <a class="skull-img" href="#" id="registrationIcon">
+              <img src="images/white-skull.png" alt="icon" />
               <span class="tooltip" style="display: none">Registration</span>
             </a>
-            <a href="#"><img src="images/heart.png" alt="icon" /></a>
+            <a class="heart-img" href="#"><img src="images/white-heart.png" alt="icon" /></a>
           </div>
           <div class="hamburger">
             <span class="bar"></span>
@@ -46,24 +46,25 @@
       </nav>
 
       <!-- registration -->
-
-      <div id="registrationOverlay" class="overlay" style="display: none">
+       
+      <div id="registrationOverlay" class="overlay">
         <div class="registrationFormContainer">
-          <div class="formHeader">
-            <h2>Registration</h2>
-            <button id="closeForm" class="closeButton">&times;</button>
-          </div>
-          <form>
-            <input type="email" placeholder="Email" required />
-            <input type="password" placeholder="Password" required />
-            <button type="submit">Register</button>
-          </form>
+            <div class="formHeader">
+                <h2>Registration</h2>
+                <button id="closeForm" class="closeButton">&times;</button>
+            </div>
+            <form>
+                <input type="email" placeholder="Email" required />
+                <input type="password" placeholder="Password" required />
+                <button type="submit">Register</button>
+            </form>
         </div>
-      </div>
+    </div>
     </header>
 
     <!-- lighting animation & search -->
 
+    <main>
     <div class="video-container">
       <video
         id="lightningVideo"
@@ -86,56 +87,59 @@
 
     <section class="productSection">
       <div class="productImages">
-        <div class="imageContainer">
-          <a href="#">
-            <img class="fullImage" src="images/stop.jpg" alt="image" />
-            <div class="overlay">RINGS</div>
-          </a>
-        </div>
-        <div class="imageContainer">
-          <a href="#">
-            <img class="fullImage" src="images/gza.jpg" alt="image" />
-            <div class="overlay">EARRINGS</div>
-          </a>
-        </div>
-        <div class="imageContainer">
-          <a href="#">
-            <img class="fullImage" src="images/stop.jpg" alt="image" />
-            <div class="overlay">NECKLACES</div>
-          </a>
-        </div>
-        <div class="imageContainer">
-          <a href="#">
-            <img class="fullImage" src="images/gza.jpg" alt="image" />
-            <div class="overlay">CHAINS</div>
-          </a>
-        </div>
+          <div class="imageContainer">
+              <a href="#">
+                  <img class="fullImage" src="images/stop.jpg" alt="image" />
+                  <div class="overlay">RINGS</div>
+              </a>
+          </div>
+          <div class="imageContainer">
+              <a href="#">
+                  <img class="fullImage" src="images/gza.jpg" alt="image" />
+                  <div class="overlay">EARRINGS</div>
+              </a>
+          </div>
+          <div class="imageContainer">
+              <a href="#">
+                  <img class="fullImage" src="images/stop.jpg" alt="image" />
+                  <div class="overlay">NECKLACES</div>
+              </a>
+          </div>
+          <div class="imageContainer">
+              <a href="#">
+                  <img class="fullImage" src="images/gza.jpg" alt="image" />
+                  <div class="overlay">CHAINS</div>
+              </a>
+          </div>
       </div>
-    </section>
-
+  </section>
+  </main>
+  
     <!-- footer section -->
 
     <footer class="footer">
       <div class="mediaText">
         <div>
           <div class="footerLogo">
-            <a href="#"><img src="images/beksi.jpg" alt="logo" /></a>
+            <a href="#"><img src="images/beksi1.svg" alt="logo" /></a>
           </div>
           <p class="mediaP">
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC.
+            Follow us on social media to be the first to know about our upcoming events and promotions!
           </p>
         </div>
         <div class="socMedia">
-          <a href="https://www.facebook.com/" target="_blank"
-            ><img src="images/facebook.png" alt="facebook"
-          /></a>
           <a href="https://www.instagram.com/" target="_blank"
             ><img src="images/instagram.png" alt="instagram"
+          /></a>
+          <a href="https://www.facebook.com/" target="_blank"
+            ><img class="fb-icon" src="images/facebook.png" alt="facebook"
           /></a>
           <a href="https://www.gmail.com/" target="_blank"
             ><img src="images/email.png" alt="gmail"
           /></a>
+          <a href="https://www.tiktok.com/" target="_blank"
+          ><img src="images/tiktokcopy.png" alt="gmail"
+        /></a>
         </div>
       </div>
       <div class="fullNav">
@@ -143,12 +147,24 @@
           <ul>
             <li>
               <a href="#">
-                <h4>Company</h4>
+                <h4>Shop</h4>
               </a>
             </li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Career</a></li>
-            <li><a href="#">Mobile</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Sale</a></li>
+          </ul>
+        </nav>
+        <nav class="footerNavigation">
+          <ul>
+            <li>
+              <a class="footerH4" href="#">
+                <h4>FAQs</h4>
+              </a>
+            </li>
+            <li><a href="#">Why Beksi?</a></li>
+            <li><a href="#">Collaboration</a></li>
+            <li><a href="#">Blog</a></li>
           </ul>
         </nav>
         <nav class="footerNavigation">
@@ -158,35 +174,21 @@
                 <h4>Contact</h4>
               </a>
             </li>
-            <li><a href="#">Why Travlog?</a></li>
-            <li><a href="#">Partner with us</a></li>
-            <li><a href="#">FAQ's</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
-        </nav>
-        <nav class="footerNavigation">
-          <ul>
-            <li>
-              <a href="#">
-                <h4>Meet Us</h4>
-              </a>
-            </li>
-            <li><a href="#">+00 92 1234 56789</a></li>
-            <li><a href="#">info@travlog.com</a></li>
-            <li><a href="#">205. R Street, New York</a></li>
-            <li><a href="#">BD23200</a></li>
+            <li><a href="#">+995 00 123 456</a></li>
+            <li><a href="#">beksishop@gmail.com</a></li>
+            <li><a href="#"> Al. Kazbegi Ave. Tbilisi</a></li>
           </ul>
         </nav>
       </div>
     </footer>
 
     <!-- footer section -->
-    
+
     <footer class="lastFooter">
    
         <div class="lastFooterDiv">
           <div>
-          <img src="images/earth-europe-solid.svg" alt="icon" />
+          <img src="images/white earth-europe-solid.png" alt="icon" />
           <span>Georgia</span>
         </div>
           <p>&copy; 2024 Beksi, All rights reverved</p>
