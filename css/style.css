@@ -127,9 +127,8 @@ a {
 .registrationFormContainer {
   background: white;
   padding: 20px;
-  border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  width: 300px;
+  width: 400px;
   position: relative;
 }
 
@@ -137,42 +136,53 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px;
 }
 
 .formHeader h2 {
-  margin: 0;
-}
-
-.closeButton {
-  background: none;
-  border: none;
-  color: white;
+  color: black;
   font-size: 24px;
-  cursor: pointer;
-  padding: 0;
+  font-weight: bold;
 }
 
 .registrationFormContainer input {
   width: 100%;
   padding: 10px;
   margin: 5px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: none;
+  border-bottom: 2px solid #000;
+  border-radius: 0;
 }
 
-.registrationFormContainer button {
+.registrationFormContainer input:focus {
+  outline: none;
+  border-bottom: 2px solid #a4250b;
+}
+
+.closeButton {
+  background: black;
+  color: white;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  align-items: center;
+  border: none;
+}
+
+.signUp {
+  width: 100%;
   margin-top: 10px;
   padding: 10px;
-  width: 100%;
   background: black;
   color: white;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
 }
 
 .registrationFormContainer button:hover {
-  background: black;
+  opacity: 0.8;
+  background: rgb(82, 82, 82);
 }
 
 /* header responsive */
@@ -237,16 +247,27 @@ video {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.8);
+  background: none;
+  background-color: white;
   padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .search-form input {
   padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.search-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-icon img {
+  width: 15px;
+  height: auto;
 }
 
 /* product section */
@@ -334,10 +355,6 @@ video {
   display: flex;
   align-items: center;
   gap: 25px;
-}
-
-.socMedia a img {
-  width: 40px;
 }
 
 .fullNav {
@@ -438,7 +455,10 @@ video {
 /* last footer section  */
 
 .lastFooter {
+  width: 100%;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 40px;
   border-top: 1px solid white;
 }
@@ -447,17 +467,23 @@ video {
   width: 15px;
 }
 
-.lastFooterDiv {
-  width: 100%;
+.footer-country {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  gap: 7px;
 }
 
-.lastFooter p {
-  margin-left: 20px;
+.footer2024 {
+  display: flex;
+  gap: 7px;
 }
 
+@media (max-width: 425px) {
+  .lastFooter {
+   flex-direction: column;
+   gap: 20px;
+   align-items: start;
+  }
+}
 
 /* rings page */
 
@@ -473,7 +499,7 @@ video {
   text-align: center;
 }
 
-.section-head h1{
+.section-head h1 {
   position: relative;
   font-size: 32px;
   margin: 10px 0px 30px;
@@ -484,7 +510,7 @@ video {
   margin-bottom: 40px;
 }
 
-.button-group .button{
+.button-group .button {
   display: inline-block;
   padding: 10px 20px;
   margin: 5px;
@@ -495,27 +521,26 @@ video {
   letter-spacing: 1px;
   transition: all 0.4s;
   border: none;
-  border-radius: 5px;
   outline: none;
   cursor: pointer;
 }
 
-.button-group button.active{
+.button-group button.active {
   background-color: rgb(98, 97, 95);
 }
 
-.button-group .button:hover{
+.button-group .button:hover {
   background-color: rgb(98, 97, 95);
 }
 
-div.gallery{
+div.gallery {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 50px;
 }
 
-div.gallery .item{
+div.gallery .item {
   position: relative;
   margin: 4px;
   width: calc(33.33% -8px);
@@ -536,7 +561,7 @@ div.gallery .item:hover img {
   opacity: 0.6;
 }
 
-.item .overLay{
+.item .overLay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -555,7 +580,7 @@ div.gallery .item:hover img {
   opacity: 1;
 }
 
-.item .overLay a{
+.item .overLay a {
   display: inline-block;
   padding: 8px 16px;
   border: 2px solid white;
@@ -583,3 +608,19 @@ div.gallery .item:hover img {
   }
 }
 
+.show-more {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: rgb(98, 97, 95);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.show-more:hover {
+  background-color: darkgray;
+}

@@ -1,3 +1,5 @@
+"use strict";
+
 // header section
 
 const hamburger = document.querySelector(".hamburger");
@@ -33,13 +35,38 @@ registrationIcon.addEventListener("mouseout", () => {
 
 registrationIcon.addEventListener("click", (e) => {
   e.preventDefault();
-  registrationOverlay.classList.add("active"); 
-  video.pause(); 
+  registrationOverlay.classList.add("active");
+  video.pause();
 });
 
 closeFormButton.addEventListener("click", () => {
-  registrationOverlay.classList.remove("active"); 
-  video.play(); 
+  registrationOverlay.classList.remove("active");
+  video.play();
+});
+
+const registrationForm = document.getElementById("registrationForm");
+
+registrationForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+
+  if (!emailRegex.test(email)) {
+    alert("Please enter a valid email address.");
+    return;
+  }
+
+  if (!passwordRegex.test(password)) {
+    alert(
+      "Password must be at least 6 characters long and contain at least one letter and one number."
+    );
+    return;
+  }
+
+  alert("Registration successful!");
 });
 
 // lighting animation & search
@@ -48,34 +75,29 @@ const videoContainer = document.querySelector(".video-container");
 const searchForm = document.getElementById("searchForm");
 
 videoContainer.addEventListener("mouseover", () => {
-  searchForm.style.display = "block"; 
+  searchForm.style.display = "block";
 });
 
 videoContainer.addEventListener("mouseout", () => {
-  searchForm.style.display = "none"; 
+  searchForm.style.display = "none";
 });
 
+// categories section
 
-// products section
-
-// Show registration overlay when clicked
 registrationIcon.addEventListener("click", (e) => {
   e.preventDefault();
-  registrationOverlay.classList.add("active"); // Show the overlay
-  video.pause(); // Pause the video when form is displayed
+  registrationOverlay.classList.add("active");
+  video.pause();
 });
 
-// Close the registration overlay when clicking outside the form
 registrationOverlay.addEventListener("click", (e) => {
   if (e.target === registrationOverlay) {
-    registrationOverlay.classList.remove("active"); // Hide the overlay
-    video.play(); // Resume the video when form is closed
+    registrationOverlay.classList.remove("active");
+    video.play();
   }
 });
 
-// Close the registration overlay with the close button
 closeFormButton.addEventListener("click", () => {
-  registrationOverlay.classList.remove("active"); // Hide the overlay
-  video.play(); // Resume the video when form is closed
+  registrationOverlay.classList.remove("active");
+  video.play();
 });
-
