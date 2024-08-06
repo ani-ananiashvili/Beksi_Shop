@@ -91,6 +91,73 @@ a {
   align-items: center;
 }
 
+.dropdown-menu {
+  display: none; 
+  position: absolute; 
+  background-color: black;
+  list-style-type: none;
+  padding: 5px 0px;
+}
+
+.dropdown-menu li {
+  margin: 10px 0;
+}
+
+.dropdown-menu li a:hover {
+  color: rgb(171, 64, 64);
+}
+
+
+.nav-item:hover .dropdown-menu {
+  display: block;
+}
+
+
+/* header responsive */
+
+@media (max-width: 768px) {
+  .headerIcons {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    background-color: #4f4a49;
+    left: -100%;
+    top: 0px;
+    gap: 0;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-item {
+    margin: 16px 0px;
+  }
+
+  .nav-menu.active {
+    position: fixed;
+    left: 0;
+  }
+}
+
 /* registration */
 
 .headerIcons {
@@ -183,45 +250,6 @@ a {
 .registrationFormContainer button:hover {
   opacity: 0.8;
   background: rgb(82, 82, 82);
-}
-
-/* header responsive */
-
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-  .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-  .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  .nav-menu {
-    position: fixed;
-    left: -100%;
-    top: 0px;
-    gap: 0;
-    flex-direction: column;
-    background-color: black;
-    width: 100%;
-    margin-top: 10px;
-    text-align: center;
-    transition: 0.3s;
-  }
-
-  .nav-item {
-    margin: 16px 0px;
-  }
-
-  .nav-menu.active {
-    left: 0;
-  }
 }
 
 /* lighting animation & search */
@@ -479,9 +507,9 @@ video {
 
 @media (max-width: 425px) {
   .lastFooter {
-   flex-direction: column;
-   gap: 20px;
-   align-items: start;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
   }
 }
 

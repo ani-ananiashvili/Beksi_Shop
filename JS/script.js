@@ -17,6 +17,24 @@ document.querySelectorAll(".nav-link").forEach((n) =>
   })
 );
 
+// dropdown menu
+const categoriesLink = document.getElementById("categoriesLink");
+const categoriesDropdown = document.getElementById("categoriesDropdown");
+
+categoriesLink.addEventListener("click", (event) => {
+  event.preventDefault();
+  categoriesDropdown.classList.toggle("active");
+});
+
+document.addEventListener("click", (event) => {
+  if (
+    !categoriesLink.contains(event.target) &&
+    !categoriesDropdown.contains(event.target)
+  ) {
+    categoriesDropdown.classList.remove("active");
+  }
+});
+
 // registration
 
 const registrationIcon = document.getElementById("registrationIcon");
