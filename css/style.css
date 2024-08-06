@@ -92,8 +92,8 @@ a {
 }
 
 .dropdown-menu {
-  display: none; 
-  position: absolute; 
+  display: none;
+  position: absolute;
   background-color: black;
   list-style-type: none;
   padding: 5px 0px;
@@ -107,11 +107,9 @@ a {
   color: rgb(171, 64, 64);
 }
 
-
 .nav-item:hover .dropdown-menu {
   display: block;
 }
-
 
 /* header responsive */
 
@@ -184,11 +182,15 @@ a {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 100;
   backdrop-filter: blur(5px);
+}
+
+.overlay.active {
+  display: flex;
 }
 
 .registrationFormContainer {
@@ -298,9 +300,9 @@ video {
   height: auto;
 }
 
-/* product section */
+/* categories section */
 
-.productSection {
+.categoriesSection {
   margin-top: 100px;
   max-width: 1800px;
   width: 100%;
@@ -309,7 +311,7 @@ video {
   gap: 20px;
 }
 
-.productImages {
+.categorieImages {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -324,34 +326,29 @@ video {
   overflow: hidden;
 }
 
-.productSection img {
+.categoriesSection img {
   width: 100%;
   height: 100%;
   transition: filter 0.7s;
 }
 
-.productSection img:hover {
+.categoriesSection img:hover {
   filter: blur(5px);
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+.categoriesTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
-.overlay.active {
-  display: flex;
-}
-
-.imageContainer:hover .overlay {
+.imageContainer:hover .categoriesTitle {
   opacity: 1;
 }
 

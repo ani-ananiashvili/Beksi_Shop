@@ -59,20 +59,22 @@
       </nav>
 
 <!-- registration -->
+
 <div id="registrationOverlay" class="overlay">
   <div class="registrationFormContainer">
-      <div class="formHeader">
-          <h2>Registration</h2>
-          <button id="closeForm" class="closeButton">&times;</button>
-      </div>
-      <form id="registrationForm">
-          <input type="email" id="email" placeholder="Email" required />
-          <input type="password" id="password" placeholder="Password" required />
-          <button type="submit" class="signUp">SIGN UP</button>
-      </form>
+    <div class="formHeader">
+      <h2>Registration</h2>
+      <button id="closeForm" class="closeButton">&times;</button>
+    </div>
+    <form id="registrationForm" novalidate>
+      <input type="email" id="email" placeholder="Email" required />
+      <span class="error-message" id="emailError"></span>
+      <input type="password" id="password" placeholder="Password" required />
+      <span class="error-message" id="passwordError"></span>
+      <button type="submit" class="signUp">SIGN UP</button>
+    </form>
   </div>
 </div>
-
 
     <!-- lighting animation & search -->
 
@@ -100,30 +102,30 @@
 
     <!-- categories section -->
 
-    <section class="productSection">
-      <div class="productImages">
+    <section class="categoriesSection">
+      <div class="categorieImages">
           <div class="imageContainer">
               <a href="rings.html" target="_blank">
                   <img class="fullImage" src="images/stop.jpg" alt="image" />
-                  <div class="overlay">RINGS</div>
+                  <div class="categoriesTitle">RINGS</div>
               </a>
           </div>
           <div class="imageContainer">
               <a href="earrings.html" target="_blank">
                   <img class="fullImage" src="images/gza.jpg" alt="image" />
-                  <div class="overlay">EARRINGS</div>
+                  <div class="categoriesTitle">EARRINGS</div>
               </a>
           </div>
           <div class="imageContainer">
               <a href="necklaces.html" target="_blank">
                   <img class="fullImage" src="images/stop.jpg" alt="image" />
-                  <div class="overlay">NECKLACES</div>
+                  <div class="categoriesTitle">NECKLACES</div>
               </a>
           </div>
           <div class="imageContainer">
               <a href="chains.html" target="_blank">
                   <img class="fullImage" src="images/gza.jpg" alt="image" />
-                  <div class="overlay">CHAINS</div>
+                  <div class="categoriesTitle">CHAINS</div>
               </a>
           </div>
       </div>

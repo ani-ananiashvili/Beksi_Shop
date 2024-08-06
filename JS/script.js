@@ -53,9 +53,15 @@ registrationIcon.addEventListener("mouseout", () => {
 
 registrationIcon.addEventListener("click", (e) => {
   e.preventDefault();
+  clearRegistrationFields();
   registrationOverlay.classList.add("active");
   video.pause();
 });
+
+function clearRegistrationFields() {
+  document.getElementById("email").value = "";
+  document.getElementById("password").value = "";
+}
 
 closeFormButton.addEventListener("click", () => {
   registrationOverlay.classList.remove("active");
@@ -85,6 +91,9 @@ registrationForm.addEventListener("submit", (event) => {
   }
 
   alert("Registration successful!");
+
+  registrationOverlay.classList.remove("active");
+  video.play();
 });
 
 // lighting animation & search
@@ -98,24 +107,4 @@ videoContainer.addEventListener("mouseover", () => {
 
 videoContainer.addEventListener("mouseout", () => {
   searchForm.style.display = "none";
-});
-
-// categories section
-
-registrationIcon.addEventListener("click", (e) => {
-  e.preventDefault();
-  registrationOverlay.classList.add("active");
-  video.pause();
-});
-
-registrationOverlay.addEventListener("click", (e) => {
-  if (e.target === registrationOverlay) {
-    registrationOverlay.classList.remove("active");
-    video.play();
-  }
-});
-
-closeFormButton.addEventListener("click", () => {
-  registrationOverlay.classList.remove("active");
-  video.play();
 });
