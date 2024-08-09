@@ -4,18 +4,27 @@
 
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
+const header = document.querySelector(".nav-bar"); 
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
+  
+  if (navMenu.classList.contains("active")) {
+    header.style.transform = "translateY(-100%)"; 
+  } else {
+    header.style.transform = "translateY(0)"; 
+  }
 });
 
 document.querySelectorAll(".nav-link").forEach((n) =>
   n.addEventListener("click", () => {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
+    header.style.transform = "translateY(0)"; 
   })
 );
+
 
 // dropdown menu
 const categoriesLink = document.getElementById("categoriesLink");
@@ -108,3 +117,30 @@ videoContainer.addEventListener("mouseover", () => {
 videoContainer.addEventListener("mouseout", () => {
   searchForm.style.display = "none";
 });
+
+
+
+
+// fetch api testing
+
+const imageIds = [529, 884, 861, 882, 526, 891, 1059]; // Array of image IDs
+const gallery = document.getElementById('gallery');
+
+// Function to fetch images by ID
+function fetchImages(ids) {
+    ids.forEach(id => {
+        fetch(`https://picsum.photos/id/${id}/info`) // Fetch image info by ID
+            .then(response => response.json()) // Parse the JSON response
+            .then(data => {
+                const img = document.createElement('img');
+                img.src = data.download_url; // Get the photo URL
+                img.alt = `Image ID ${id}`; // Set a descriptive alt text
+                gallery.appendChild(img); // Append the image to the gallery
+            })
+            .catch(error => console.error('Error fetching image:', error)); // Handle errors
+    });
+}
+
+// Call the function with the array of image IDs
+fetchImages(imageIds);
+
