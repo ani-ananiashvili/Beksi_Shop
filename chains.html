@@ -11,6 +11,93 @@
   </head>
 
   <body>
+
+    <!-- header section -->
+
+ <section class="mainLogo">
+  <a href="index.html"
+    ><img class="beksi" src="images/beksi1.svg" alt="logo"
+  /></a>
+</section>
+
+<header>
+  <nav class="nav-bar">
+    <a href="#"><img src="images/B2copy.png" alt="logo" /></a>
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
+      <li class="nav-item">
+        <a href="#" class="nav-link" id="categoriesLink">CATEGORIES</a>
+        <ul class="dropdown-menu" id="categoriesDropdown">
+          <li>
+            <a href="rings.html" target="_blank" class="dropdown-item"
+              >RINGS</a
+            >
+          </li>
+          <li>
+            <a href="earrings.html" target="_blank" class="dropdown-item"
+              >EARRINGS</a
+            >
+          </li>
+          <li>
+            <a href="necklaces.html" target="_blank" class="dropdown-item"
+              >NECKLACE</a
+            >
+          </li>
+          <li>
+            <a href="chains.html" target="_blank" class="dropdown-item"
+              >CHAINS</a
+            >
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="#" class="nav-link">SALE</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">ABOUT US</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
+    </ul>
+    <div class="responsiveIcons">
+      <div class="headerIcons">
+        <a class="skull-img" href="#" id="registrationIcon">
+          <img src="images/white-skull.png" alt="icon" />
+          <span class="tooltip" style="display: none">Registration</span>
+        </a>
+        <a class="heart-img" href="#"
+          ><img src="images/white-heart.png" alt="icon"
+        /></a>
+      </div>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- registration -->
+
+  <div id="registrationOverlay" class="overlay">
+    <div class="registrationFormContainer">
+      <div class="formHeader">
+        <h2>Registration</h2>
+        <button id="closeForm" class="closeButton">&times;</button>
+      </div>
+      <form id="registrationForm" novalidate>
+        <input type="email" id="email" placeholder="Email" required />
+        <span class="error-message" id="emailError"></span>
+        <input
+          type="password"
+          id="password"
+          placeholder="Password"
+          required
+        />
+        <span class="error-message" id="passwordError"></span>
+        <button type="submit" class="signUp">SIGN UP</button>
+      </form>
+    </div>
+  </div>
+</header>
+
+<!-- chains section -->
+
     <section class="portfolio">
       <section class="section-head">
         <h1>CHAINS</h1>
@@ -29,49 +116,49 @@
           <div class="item development">
             <img src="images/chains/chain-3.jpg" alt="image" />
             <div class="overLay">
-              <a href="#">VIEW MORE</a>
+              <a href="#">DETAILS</a>
             </div>
           </div>
 
           <div class="item design">
             <img src="images/chains/chain-4.jpg" alt="image" />
             <div class="overLay">
-              <a href="#">VIEW MORE</a>
+              <a href="#">DETAILS</a>
             </div>
           </div>
 
           <div class="item design">
             <img src="images/chains/chain-2.jpg" alt="image" />
             <div class="overLay">
-              <a href="#">VIEW MORE</a>
+              <a href="#">DETAILS</a>
             </div>
           </div>
 
           <div class="item logo">
             <img src="images/chains/chain-1.jpg" alt="image" />
             <div class="overLay">
-              <a href="#">VIEW MORE</a>
+              <a href="#">DETAILS</a>
             </div>
           </div>
 
           <div class="item design">
             <img src="images/chains/chain-5.jpg" alt="image" />
             <div class="overLay">
-              <a href="#">VIEW MORE</a>
+              <a href="#">DETAILS</a>
             </div>
           </div>
 
           <div class="item logo">
             <img src="images/chains/chain-8.jpg" alt="image" />
             <div class="overLay">
-              <a href="#">VIEW MORE</a>
+              <a href="#">DETAILS</a>
             </div>
           </div>
 
           <div class="item design">
             <img src="images/chains/chain-7.jpg" alt="image" />
             <div class="overLay">
-              <a href="#">VIEW MORE</a>
+              <a href="#">DETAILS</a>
             </div>
           </div>
 
@@ -79,14 +166,130 @@
           <div class="item logo">
             <img src="images/chains/chain-6.jpg" alt="image" />
             <div class="overLay">
-              <a href="#">VIEW MORE</a>
+              <a href="#">DETAILS</a>
             </div>
           </div>
 
         </div>
-        <button class="show-more">Show More</button>
+        <button class="show-more">SHOW MORE</button>
       </main>
     </section>
+
+    <!-- Modal Structure -->
+<div class="modal" id="detailModal">
+  <div class="modal-content">
+    <span class="close" id="closeModal">&times;</span>
+    <img id="modalImage" src="" alt="Details Image" />
+    <div class="details">
+      <p id="category">Category: chain</p>
+      <p id="size">Size: 17</p>
+      <p id="price">Price: 15 GEL</p>
+      <button id="heartButton"><img src="images/heart.png" style="width: 20px" alt="icon"> <span>Add to Favorites</span></button>
+    </div>
+  </div>
+</div>
+
+
+<!-- footer section -->
+
+<footer class="footer">
+  <div class="mediaText">
+    <div>
+      <div class="footerLogo">
+        <a href="#"><img src="images/beksi1.svg" alt="logo" /></a>
+      </div>
+      <p class="mediaP">
+        Follow us on social media to be the first to know about our upcoming
+        events and promotions!
+      </p>
+    </div>
+    <div class="socMedia">
+      <a
+        href="https://www.instagram.com/onlineshopbeksi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        target="_blank"
+      >
+        <img
+          src="images/instagram.png"
+          alt="instagram"
+          style="width: 45px"
+        />
+      </a>
+      <a href="https://www.facebook.com/" target="_blank">
+        <img src="images/facebook.png" alt="facebook" style="width: 30px" />
+      </a>
+      <a
+        href="mailto:beksishop@gmail.com?subject=The%20subject%20of%20the%20mail"
+        target="_blank"
+      >
+        <img src="images/email.png" alt="gmail" style="width: 50px" />
+      </a>
+      <a
+        class="tiktok-icon"
+        href="https://www.tiktok.com/@onlineshopbeksi?_t=8ofzGQyhcBT&_r=1"
+        target="_blank"
+      >
+        <img src="images/tiktokcopy.png" alt="tiktok" style="width: 40px" />
+      </a>
+    </div>
+  </div>
+  <div class="fullNav">
+    <nav class="footerNavigation">
+      <ul>
+        <li>
+          <a href="#">
+            <h4 class="nameh4">Shop</h4>
+          </a>
+        </li>
+        <li><a class="list" href="#">About Us</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">Sale</a></li>
+      </ul>
+    </nav>
+    <nav class="footerNavigation">
+      <ul>
+        <li>
+          <a class="footerH4" href="#">
+            <h4>FAQs</h4>
+          </a>
+        </li>
+        <li><a href="#">Delivery</a></li>
+        <li><a href="#">Collaboration</a></li>
+        <li><a href="blog.html" target="_blank">Blog</a></li>
+      </ul>
+    </nav>
+    <nav class="footerNavigation">
+      <ul>
+        <li>
+          <a href="#">
+            <h4>Contact</h4>
+          </a>
+        </li>
+        <li><a href="tel:+99501010101">+995 01 010 101</a></li>
+        <li>
+          <a
+            href="mailto:beksishop@gmail.com?subject=The%20subject%20of%20the%20mail"
+            >beksishop@gmail.com</a
+          >
+        </li>
+        <li><a href="#">Tbilisi</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<!-- footer section -->
+
+<footer class="lastFooter">
+  <div class="footer-country">
+    <img src="images/white-earth-europe-solid.png" alt="icon" />
+    <span>Georgia</span>
+  </div>
+  <div class="footer2024">
+    <p>&copy; 2024 Beksi,</p>
+    <span>All rights reverved</span>
+  </div>
+</footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
     <script type="text/javascript">
@@ -105,5 +308,6 @@
         });
       });
     </script>
+    <script src="JS/script.js"></script>
   </body>
 </html>

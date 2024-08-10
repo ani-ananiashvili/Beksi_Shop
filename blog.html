@@ -10,10 +10,214 @@
     <link rel="stylesheet" href="css/fonts.css" />
   </head>
   <body>
+    <!-- header section -->
+
+    <section class="mainLogo">
+      <a href="index.html"
+        ><img class="beksi" src="images/beksi1.svg" alt="logo"
+      /></a>
+    </section>
+
+    <header>
+      <nav class="nav-bar">
+        <a href="#"><img src="images/B2copy.png" alt="logo" /></a>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" id="categoriesLink">CATEGORIES</a>
+            <ul class="dropdown-menu" id="categoriesDropdown">
+              <li>
+                <a href="rings.html" target="_blank" class="dropdown-item"
+                  >RINGS</a
+                >
+              </li>
+              <li>
+                <a href="earrings.html" target="_blank" class="dropdown-item"
+                  >EARRINGS</a
+                >
+              </li>
+              <li>
+                <a href="necklaces.html" target="_blank" class="dropdown-item"
+                  >NECKLACE</a
+                >
+              </li>
+              <li>
+                <a href="chains.html" target="_blank" class="dropdown-item"
+                  >CHAINS</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link">SALE</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">ABOUT US</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
+        </ul>
+        <div class="responsiveIcons">
+          <div class="headerIcons">
+            <a class="skull-img" href="#" id="registrationIcon">
+              <img src="images/white-skull.png" alt="icon" />
+              <span class="tooltip" style="display: none">Registration</span>
+            </a>
+            <a class="heart-img" href="#"
+              ><img src="images/white-heart.png" alt="icon"
+            /></a>
+          </div>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
+
+      <!-- registration -->
+
+      <div id="registrationOverlay" class="overlay">
+        <div class="registrationFormContainer">
+          <div class="formHeader">
+            <h2>Registration</h2>
+            <button id="closeForm" class="closeButton">&times;</button>
+          </div>
+          <form id="registrationForm" novalidate>
+            <input type="email" id="email" placeholder="Email" required />
+            <span class="error-message" id="emailError"></span>
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <span class="error-message" id="passwordError"></span>
+            <button type="submit" class="signUp">SIGN UP</button>
+          </form>
+        </div>
+      </div>
+    </header>
+
     <!-- fetch api testing -->
 
-    <div id="gallery"></div>
+    <div class="photo-container"></div>
 
+    <!-- footer section -->
+
+    <footer class="footer">
+      <div class="mediaText">
+        <div>
+          <div class="footerLogo">
+            <a href="#"><img src="images/beksi1.svg" alt="logo" /></a>
+          </div>
+          <p class="mediaP">
+            Follow us on social media to be the first to know about our upcoming
+            events and promotions!
+          </p>
+        </div>
+        <div class="socMedia">
+          <a
+            href="https://www.instagram.com/onlineshopbeksi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+          >
+            <img
+              src="images/instagram.png"
+              alt="instagram"
+              style="width: 45px"
+            />
+          </a>
+          <a href="https://www.facebook.com/" target="_blank">
+            <img src="images/facebook.png" alt="facebook" style="width: 30px" />
+          </a>
+          <a
+            href="mailto:beksishop@gmail.com?subject=The%20subject%20of%20the%20mail"
+            target="_blank"
+          >
+            <img src="images/email.png" alt="gmail" style="width: 50px" />
+          </a>
+          <a
+            class="tiktok-icon"
+            href="https://www.tiktok.com/@onlineshopbeksi?_t=8ofzGQyhcBT&_r=1"
+            target="_blank"
+          >
+            <img src="images/tiktokcopy.png" alt="tiktok" style="width: 40px" />
+          </a>
+        </div>
+      </div>
+      <div class="fullNav">
+        <nav class="footerNavigation">
+          <ul>
+            <li>
+              <a href="#">
+                <h4 class="nameh4">Shop</h4>
+              </a>
+            </li>
+            <li><a class="list" href="#">About Us</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Sale</a></li>
+          </ul>
+        </nav>
+        <nav class="footerNavigation">
+          <ul>
+            <li>
+              <a class="footerH4" href="#">
+                <h4>FAQs</h4>
+              </a>
+            </li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">Collaboration</a></li>
+            <li><a href="blog.html" target="_blank">Blog</a></li>
+          </ul>
+        </nav>
+        <nav class="footerNavigation">
+          <ul>
+            <li>
+              <a href="#">
+                <h4>Contact</h4>
+              </a>
+            </li>
+            <li><a href="tel:+99501010101">+995 01 010 101</a></li>
+            <li>
+              <a
+                href="mailto:beksishop@gmail.com?subject=The%20subject%20of%20the%20mail"
+                >beksishop@gmail.com</a
+              >
+            </li>
+            <li><a href="#">Tbilisi</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- footer section -->
+
+    <footer class="lastFooter">
+      <div class="footer-country">
+        <img src="images/white-earth-europe-solid.png" alt="icon" />
+        <span>Georgia</span>
+      </div>
+      <div class="footer2024">
+        <p>&copy; 2024 Beksi,</p>
+        <span>All rights reverved</span>
+      </div>
+    </footer>
+
+    <script type="text/javascript">
+      // fetch api testing
+
+      // script.js
+      const imageIds = [526, 529, 566, 861, 882, 884, 891, 1059]; // Array of image IDs
+      const photoContainer = document.querySelector(".photo-container"); // Select the photo container
+
+      // Function to fetch images by ID
+      function fetchImages(ids) {
+        ids.forEach((id) => {
+          const img = document.createElement("img"); // Create a new image element
+          img.src = `https://picsum.photos/id/${id}/300`; // Fetch the image directly
+          img.alt = `Image ID ${id}`; // Set a descriptive alt text
+          photoContainer.appendChild(img); // Append the image to the photo container
+        });
+      }
+
+      // Call the function with the array of image IDs
+      fetchImages(imageIds);
+    </script>
     <script src="JS/script.js"></script>
   </body>
 </html>

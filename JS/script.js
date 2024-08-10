@@ -117,30 +117,3 @@ videoContainer.addEventListener("mouseover", () => {
 videoContainer.addEventListener("mouseout", () => {
   searchForm.style.display = "none";
 });
-
-
-
-
-// fetch api testing
-
-const imageIds = [529, 884, 861, 882, 526, 891, 1059]; // Array of image IDs
-const gallery = document.getElementById('gallery');
-
-// Function to fetch images by ID
-function fetchImages(ids) {
-    ids.forEach(id => {
-        fetch(`https://picsum.photos/id/${id}/info`) // Fetch image info by ID
-            .then(response => response.json()) // Parse the JSON response
-            .then(data => {
-                const img = document.createElement('img');
-                img.src = data.download_url; // Get the photo URL
-                img.alt = `Image ID ${id}`; // Set a descriptive alt text
-                gallery.appendChild(img); // Append the image to the gallery
-            })
-            .catch(error => console.error('Error fetching image:', error)); // Handle errors
-    });
-}
-
-// Call the function with the array of image IDs
-fetchImages(imageIds);
-
