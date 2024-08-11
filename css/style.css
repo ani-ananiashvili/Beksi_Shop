@@ -182,7 +182,7 @@ a {
 .tooltip {
   position: absolute;
   top: -25px;
-  left: 50%;
+  left: 20%;
   transform: translateX(-50%);
   background: #333;
   color: #fff;
@@ -289,7 +289,7 @@ video {
 }
 
 .search-form {
-  min-width: 40%; 
+  min-width: 40%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -301,16 +301,16 @@ video {
 }
 
 .search-form input {
-  padding: 5px 40px 5px 10px; 
-  border: none; 
+  padding: 5px 40px 5px 10px;
+  border: none;
   outline: none;
-  flex-grow: 1; 
-  max-width: 100%; 
+  flex-grow: 1;
+  max-width: 100%;
 }
 
 .search-icon {
-  position: absolute; 
-  right: 15px; 
+  position: absolute;
+  right: 15px;
   padding: 3px 0px;
   background: none;
   border: none;
@@ -318,7 +318,7 @@ video {
 }
 
 .search-icon img {
-  width: 15px; 
+  width: 15px;
   height: auto;
 }
 
@@ -399,8 +399,8 @@ video {
 }
 
 .mediaP::after {
-  content: ''; 
-  display: inline-block; 
+  content: "";
+  display: inline-block;
   width: 100%;
 }
 
@@ -422,16 +422,16 @@ video {
   gap: 32px;
 }
 
- .footerNavigation ul li a {
+.footerLists {
   font-family: "Inter400";
   font-size: 18px;
   font-weight: 400;
   line-height: 28.8px;
 }
 
-.footerNavigation ul li:hover{
-  transform: scale(0.9); 
-  transition: transform 0.2s; 
+.footerLists:hover {
+  transform: scale(0.9);
+  transition: transform 0.2s;
 }
 
 .footerNavigation ul li a h4 {
@@ -451,8 +451,7 @@ video {
   position: absolute;
   left: 1px;
   bottom: -6px;
-} 
-
+}
 
 /* footer  responsive */
 
@@ -679,50 +678,54 @@ div.gallery .item:hover img {
   transition: background-color 0.3s;
 }
 
-.show-more:hover {
-  background-color: darkgray;
+
+.show-more.disabled {
+  background-color: rgb(200, 200, 200); 
+  color: rgba(255, 255, 255, 0.5); 
+  cursor: not-allowed; 
 }
 
+
 .modal {
-  display: none; 
+  display: none;
   position: fixed;
   z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); 
-  backdrop-filter: blur(5px); 
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
 }
 
 .modal-content {
-  position: relative; 
+  position: relative;
   background-color: #000000;
-  margin: 6.5% auto; 
+  margin: 6.5% auto;
   padding: 40px;
   border: 1px solid #888;
-  max-width: 400px; 
+  max-width: 400px;
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
+  flex-direction: column;
+  align-items: center;
 }
 
 .modal-content img {
-  max-width: 100%; 
+  max-width: 100%;
   height: auto;
   margin-bottom: 15px;
 }
 
 .details {
-  text-align: center; 
-  width: 100%; 
+  text-align: center;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
 #heartButton {
-  padding-top: 10px;
+  padding-top: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -735,9 +738,9 @@ div.gallery .item:hover img {
 
 .close {
   color: #aaa;
-  position: absolute; 
-  top: 10px; 
-  right: 15px; 
+  position: absolute;
+  top: 10px;
+  right: 15px;
   font-size: 28px;
   font-weight: bold;
 }
@@ -752,6 +755,7 @@ div.gallery .item:hover img {
 
 
 /* blog page */
+
 .photo-container {
   width: 100%;
   flex-wrap: wrap;

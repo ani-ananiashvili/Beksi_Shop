@@ -11,102 +11,99 @@
   </head>
 
   <body>
+    <!-- header section -->
 
+    <section class="mainLogo">
+      <a href="index.html"
+        ><img class="beksi" src="images/beksi1.svg" alt="logo"
+      /></a>
+    </section>
 
-
- <!-- header section -->
-
- <section class="mainLogo">
-  <a href="index.html"
-    ><img class="beksi" src="images/beksi1.svg" alt="logo"
-  /></a>
-</section>
-
-<header>
-  <nav class="nav-bar">
-    <a href="#"><img src="images/B2copy.png" alt="logo" /></a>
-    <ul class="nav-menu">
-      <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
-      <li class="nav-item">
-        <a href="#" class="nav-link" id="categoriesLink">CATEGORIES</a>
-        <ul class="dropdown-menu" id="categoriesDropdown">
-          <li>
-            <a href="rings.html" target="_blank" class="dropdown-item"
-              >RINGS</a
-            >
+    <header>
+      <nav class="nav-bar">
+        <a href="index.html"><img src="images/B2copy.png" alt="logo" /></a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">HOME</a>
           </li>
-          <li>
-            <a href="earrings.html" target="_blank" class="dropdown-item"
-              >EARRINGS</a
-            >
+          <li class="nav-item">
+            <a href="#" class="nav-link" id="categoriesLink">CATEGORIES</a>
+            <ul class="dropdown-menu" id="categoriesDropdown">
+              <li>
+                <a href="rings.html" target="_blank" class="dropdown-item"
+                  >RINGS</a
+                >
+              </li>
+              <li>
+                <a href="earrings.html" target="_blank" class="dropdown-item"
+                  >EARRINGS</a
+                >
+              </li>
+              <li>
+                <a href="necklaces.html" target="_blank" class="dropdown-item"
+                  >NECKLACE</a
+                >
+              </li>
+              <li>
+                <a href="chains.html" target="_blank" class="dropdown-item"
+                  >CHAINS</a
+                >
+              </li>
+            </ul>
           </li>
-          <li>
-            <a href="necklaces.html" target="_blank" class="dropdown-item"
-              >NECKLACE</a
-            >
-          </li>
-          <li>
-            <a href="chains.html" target="_blank" class="dropdown-item"
-              >CHAINS</a
-            >
-          </li>
+          <li class="nav-item"><a href="#" class="nav-link">SALE</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">ABOUT US</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
         </ul>
-      </li>
-      <li class="nav-item"><a href="#" class="nav-link">SALE</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">ABOUT US</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
-    </ul>
-    <div class="responsiveIcons">
-      <div class="headerIcons">
-        <a class="skull-img" href="#" id="registrationIcon">
-          <img src="images/white-skull.png" alt="icon" />
-          <span class="tooltip" style="display: none">Registration</span>
-        </a>
-        <a class="heart-img" href="#"
-          ><img src="images/white-heart.png" alt="icon"
-        /></a>
-      </div>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-    </div>
-  </nav>
+        <div class="responsiveIcons">
+          <div class="headerIcons">
+            <a class="skull-img" href="#" id="registrationIcon">
+              <img src="images/white-skull.png" alt="icon" />
+              <span class="tooltip" style="display: none">Registration</span>
+            </a>
+            <a class="heart-img" href="#"
+              ><img src="images/white-heart.png" alt="icon"
+            /></a>
+          </div>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
 
-  <!-- registration -->
+      <!-- registration -->
 
-  <div id="registrationOverlay" class="overlay">
-    <div class="registrationFormContainer">
-      <div class="formHeader">
-        <h2>Registration</h2>
-        <button id="closeForm" class="closeButton">&times;</button>
+      <div id="registrationOverlay" class="overlay">
+        <div class="registrationFormContainer">
+          <div class="formHeader">
+            <h2>Registration</h2>
+            <button id="closeForm" class="closeButton">&times;</button>
+          </div>
+          <form id="registrationForm" novalidate>
+            <input type="email" id="email" placeholder="Email" required />
+            <span class="error-message" id="emailError"></span>
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <span class="error-message" id="passwordError"></span>
+            <button type="submit" class="signUp">SIGN UP</button>
+          </form>
+        </div>
       </div>
-      <form id="registrationForm" novalidate>
-        <input type="email" id="email" placeholder="Email" required />
-        <span class="error-message" id="emailError"></span>
-        <input
-          type="password"
-          id="password"
-          placeholder="Password"
-          required
-        />
-        <span class="error-message" id="passwordError"></span>
-        <button type="submit" class="signUp">SIGN UP</button>
-      </form>
-    </div>
-  </div>
-</header>
-
+    </header>
 
     <!-- rings section -->
-
     <section class="portfolio">
       <section class="section-head">
         <h1>RINGS</h1>
       </section>
 
-      <section class="mainContainer">
+      <main class="mainContainer">
         <div class="button-group">
           <button class="button active" data-filter="*">All</button>
           <button class="button" data-filter=".design">Skull</button>
@@ -115,56 +112,56 @@
         </div>
 
         <div class="gallery">
-          <div class="item design">
-            <img src="images/skull_rings/skull-7.jpg" alt="image" />
+          <div class="item design" data-price="5 GEL" data-size="17">
+            <img src="images/skull_rings/skull-10.jpg" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
 
-          <div class="item development">
+          <div class="item development" data-price="7 GEL" data-size="18">
             <img src="images/snake_rings/snake-ring2.PNG" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
 
-          <div class="item design">
-            <img src="images/skull_rings/skull-1.jpg" alt="image" />
+          <div class="item design" data-price="6 GEL" data-size="16">
+            <img src="images/skull_rings/skull-11.jpg" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
 
-          <div class="item logo">
-            <img src="images/snake_rings/snake-ring9.PNG" alt="image" />
+          <div class="item logo" data-price="8 GEL" data-size="19">
+            <img src="images/snake_rings/snake-ring5.PNG" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
 
-          <div class="item design">
-            <img src="images/skull_rings/skull-9.jpg" alt="image" />
-            <div class="overLay">
-              <a href="#">DETAILS</a>
-            </div>
-          </div>
-
-          <div class="item logo">
+          <div class="item design" data-price="4 GEL" data-size="15">
             <img src="images/snake_rings/snake-ring7.PNG" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
 
-          <div class="item logo">
-            <img src="images/snake_rings/snake-ring16.PNG" alt="image" />
+          <div class="item logo" data-price="9 GEL" data-size="20">
+            <img src="images/skull_rings/skull-5.jpg" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
 
-          <div class="item design">
+          <div class="item logo" data-price="10 GEL" data-size="21">
+            <img src="images/snake_rings/snake-ring6.PNG" alt="image" />
+            <div class="overLay">
+              <a href="#">DETAILS</a>
+            </div>
+          </div>
+
+          <div class="item design" data-price="11 GEL" data-size="22">
             <img src="images/skull_rings/skull-8.jpg" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
@@ -172,24 +169,25 @@
           </div>
         </div>
         <button class="show-more">SHOW MORE</button>
-      </section>
+      </main>
     </section>
 
-<!-- Modal Structure -->
-<div class="modal" id="detailModal">
-  <div class="modal-content">
-    <span class="close" id="closeModal">&times;</span>
-    <img id="modalImage" src="" alt="Details Image" />
-    <div class="details">
-      <p id="category">Category: Ring</p>
-      <p id="size">Size: 17</p>
-      <p id="price">Price: 5 GEL</p>
-      <button id="heartButton"><img src="images/heart.png" style="width: 20px" alt="icon"> <span>Add to Favorites</span></button>
+    <!-- Modal Structure -->
+    <div class="modal" id="detailModal" style="display: none">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <img id="modalImage" src="" alt="Details Image" />
+        <div class="details">
+          <p id="category">Category: Ring</p>
+          <p id="size">Size:</p>
+          <p id="price">Price:</p>
+          <button id="heartButton">
+            <img src="images/heart.png" style="width: 20px" alt="icon" />
+            <span>Add to Favorites</span>
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
-
 
     <!-- footer section -->
 
@@ -238,12 +236,12 @@
           <ul>
             <li>
               <a href="#">
-                <h4 class="nameh4">Shop</h4>
+                <h4>Shop</h4>
               </a>
             </li>
-            <li><a class="list" href="#">About Us</a></li>
-            <li><a href="#">Categories</a></li>
-            <li><a href="#">Sale</a></li>
+            <li class="footerLists"><a class="list" href="#">About Us</a></li>
+            <li class="footerLists"><a href="#">Categories</a></li>
+            <li class="footerLists"><a href="#">Sale</a></li>
           </ul>
         </nav>
         <nav class="footerNavigation">
@@ -253,9 +251,11 @@
                 <h4>FAQs</h4>
               </a>
             </li>
-            <li><a href="#">Delivery</a></li>
-            <li><a href="#">Collaboration</a></li>
-            <li><a href="blog.html" target="_blank">Blog</a></li>
+            <li class="footerLists"><a href="#">Delivery</a></li>
+            <li class="footerLists"><a href="#">Collaboration</a></li>
+            <li class="footerLists">
+              <a href="blog.html" target="_blank">Blog</a>
+            </li>
           </ul>
         </nav>
         <nav class="footerNavigation">
@@ -265,20 +265,22 @@
                 <h4>Contact</h4>
               </a>
             </li>
-            <li><a href="tel:+99501010101">+995 01 010 101</a></li>
-            <li>
+            <li class="footerLists">
+              <a href="tel:+99501010101">+995 01 010 101</a>
+            </li>
+            <li class="footerLists">
               <a
                 href="mailto:beksishop@gmail.com?subject=The%20subject%20of%20the%20mail"
                 >beksishop@gmail.com</a
               >
             </li>
-            <li><a href="#">Tbilisi</a></li>
+            <li class="footerLists"><a href="#">Tbilisi</a></li>
           </ul>
         </nav>
       </div>
     </footer>
 
-    <!-- footer section -->
+    <!-- last footer section -->
 
     <footer class="lastFooter">
       <div class="footer-country">
@@ -309,42 +311,55 @@
         });
       });
 
+      // Prices and Sizes
 
+      // Show modal with details
+      $(".overLay a").on("click", function (event) {
+        event.preventDefault(); // Prevent default anchor behavior
 
+        // Get the image source and data attributes from the clicked item
+        const imgSrc = $(this).closest(".item").find("img").attr("src");
+        const price = $(this).closest(".item").data("price");
+        const size = $(this).closest(".item").data("size");
 
-// 
+        // Set the modal image source and details
+        $("#modalImage").attr("src", imgSrc);
+        $("#price").text("Price: " + price);
+        $("#size").text("Size: " + size);
 
-// Add event listeners to the DETAILS links
-$('.overLay a').on('click', function (event) {
-  event.preventDefault(); // Prevent default anchor behavior
+        // Open the modal
+        $("#detailModal").css("display", "block");
+      });
 
-  // Get the image source from the clicked item
-  const imgSrc = $(this).closest('.item').find('img').attr('src');
-  
-  // Set the modal image source
-  $('#modalImage').attr('src', imgSrc);
+      // Close modal when close button is clicked
+      $("#closeModal").on("click", function () {
+        $("#detailModal").css("display", "none");
+      });
 
-  // Open the modal
-  $('#detailModal').css('display', 'block');
-});
+      // Close modal when clicking outside the modal
+      $(window).on("click", function (event) {
+        if ($(event.target).is("#detailModal")) {
+          $("#detailModal").css("display", "none");
+        }
+      });
 
-// Close modal when the user clicks on <span> (x)
-$('#closeModal').on('click', function () {
-  $('#detailModal').css('display', 'none');
-});
+      const showMoreButton = document.querySelector(".show-more");
 
-// Close modal when the user clicks anywhere outside of the modal
-$(window).on('click', function (event) {
-  if (event.target.id === 'detailModal') {
-    $('#detailModal').css('display', 'none');
-  }
-});
+      // Function to disable the button
+      function disableButton() {
+        showMoreButton.classList.add("disabled");
+      }
 
+      // Function to enable the button
+      function enableButton() {
+        showMoreButton.classList.remove("disabled");
+      }
 
-// 
-
-
-
+      // Example usage: disable the button after it's clicked
+      showMoreButton.addEventListener("click", () => {
+        disableButton();
+        // Add your logic to load more photos here
+      });
     </script>
     <script src="JS/script.js"></script>
   </body>

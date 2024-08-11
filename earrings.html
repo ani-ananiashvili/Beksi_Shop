@@ -11,92 +11,91 @@
   </head>
 
   <body>
-
     <!-- header section -->
 
- <section class="mainLogo">
-  <a href="index.html"
-    ><img class="beksi" src="images/beksi1.svg" alt="logo"
-  /></a>
-</section>
+    <section class="mainLogo">
+      <a href="index.html"
+        ><img class="beksi" src="images/beksi1.svg" alt="logo"
+      /></a>
+    </section>
 
-<header>
-  <nav class="nav-bar">
-    <a href="#"><img src="images/B2copy.png" alt="logo" /></a>
-    <ul class="nav-menu">
-      <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
-      <li class="nav-item">
-        <a href="#" class="nav-link" id="categoriesLink">CATEGORIES</a>
-        <ul class="dropdown-menu" id="categoriesDropdown">
-          <li>
-            <a href="rings.html" target="_blank" class="dropdown-item"
-              >RINGS</a
-            >
+    <header>
+      <nav class="nav-bar">
+        <a href="#"><img src="images/B2copy.png" alt="logo" /></a>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" id="categoriesLink">CATEGORIES</a>
+            <ul class="dropdown-menu" id="categoriesDropdown">
+              <li>
+                <a href="rings.html" target="_blank" class="dropdown-item"
+                  >RINGS</a
+                >
+              </li>
+              <li>
+                <a href="earrings.html" target="_blank" class="dropdown-item"
+                  >EARRINGS</a
+                >
+              </li>
+              <li>
+                <a href="necklaces.html" target="_blank" class="dropdown-item"
+                  >NECKLACE</a
+                >
+              </li>
+              <li>
+                <a href="chains.html" target="_blank" class="dropdown-item"
+                  >CHAINS</a
+                >
+              </li>
+            </ul>
           </li>
-          <li>
-            <a href="earrings.html" target="_blank" class="dropdown-item"
-              >EARRINGS</a
-            >
-          </li>
-          <li>
-            <a href="necklaces.html" target="_blank" class="dropdown-item"
-              >NECKLACE</a
-            >
-          </li>
-          <li>
-            <a href="chains.html" target="_blank" class="dropdown-item"
-              >CHAINS</a
-            >
-          </li>
+          <li class="nav-item"><a href="#" class="nav-link">SALE</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">ABOUT US</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
         </ul>
-      </li>
-      <li class="nav-item"><a href="#" class="nav-link">SALE</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">ABOUT US</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
-    </ul>
-    <div class="responsiveIcons">
-      <div class="headerIcons">
-        <a class="skull-img" href="#" id="registrationIcon">
-          <img src="images/white-skull.png" alt="icon" />
-          <span class="tooltip" style="display: none">Registration</span>
-        </a>
-        <a class="heart-img" href="#"
-          ><img src="images/white-heart.png" alt="icon"
-        /></a>
-      </div>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-    </div>
-  </nav>
+        <div class="responsiveIcons">
+          <div class="headerIcons">
+            <a class="skull-img" href="#" id="registrationIcon">
+              <img src="images/white-skull.png" alt="icon" />
+              <span class="tooltip" style="display: none">Registration</span>
+            </a>
+            <a class="heart-img" href="#"
+              ><img src="images/white-heart.png" alt="icon"
+            /></a>
+          </div>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
 
-  <!-- registration -->
+      <!-- registration -->
 
-  <div id="registrationOverlay" class="overlay">
-    <div class="registrationFormContainer">
-      <div class="formHeader">
-        <h2>Registration</h2>
-        <button id="closeForm" class="closeButton">&times;</button>
+      <div id="registrationOverlay" class="overlay">
+        <div class="registrationFormContainer">
+          <div class="formHeader">
+            <h2>Registration</h2>
+            <button id="closeForm" class="closeButton">&times;</button>
+          </div>
+          <form id="registrationForm" novalidate>
+            <input type="email" id="email" placeholder="Email" required />
+            <span class="error-message" id="emailError"></span>
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <span class="error-message" id="passwordError"></span>
+            <button type="submit" class="signUp">SIGN UP</button>
+          </form>
+        </div>
       </div>
-      <form id="registrationForm" novalidate>
-        <input type="email" id="email" placeholder="Email" required />
-        <span class="error-message" id="emailError"></span>
-        <input
-          type="password"
-          id="password"
-          placeholder="Password"
-          required
-        />
-        <span class="error-message" id="passwordError"></span>
-        <button type="submit" class="signUp">SIGN UP</button>
-      </form>
-    </div>
-  </div>
-</header>
+    </header>
 
-<!-- earrings section -->
+    <!-- earrings section -->
 
     <section class="portfolio">
       <section class="section-head">
@@ -112,57 +111,57 @@
         </div>
 
         <div class="gallery">
-          <div class="item design">
-            <img src="images/earrings/skull-body.jpg" alt="image" />
+          <div class="item design" data-price="5 GEL" data-size="17">
+            <img src="images/earrings/earring-1.jpg" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
 
-          <div class="item development">
-            <img src="images/earrings/snake-cross.jpg" alt="image" />
+          <div class="item development" data-price="5 GEL" data-size="17">
+            <img src="images/earrings/earring-2.jpg" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
 
-          <div class="item design">
-            <img src="images/earrings/skull-butterfly2.jpg" alt="image" />
+          <div class="item design" data-price="5 GEL" data-size="17">
+            <img src="images/earrings/earring-3.jpg" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
 
-          <div class="item logo">
-            <img src="images/earrings/big-pentagrama.jpg" alt="image" />
+          <div class="item logo" data-price="5 GEL" data-size="17">
+            <img src="images/earrings/earring-4.jpg" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
 
-          <div class="item design">
-            <img src="images/earrings/cat.jpg" alt="image" />
+          <div class="item design" data-price="5 GEL" data-size="17">
+            <img src="images/earrings/earring-5.jpg" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
 
-          <div class="item logo">
-            <img src="images/earrings/star-pentagrama.jpg" alt="image" />
+          <div class="item logo" data-price="5 GEL" data-size="17">
+            <img src="images/earrings/earring-6.jpg" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
 
-          <div class="item logo">
-            <img src="images/earrings/skull-cross.jpg" alt="image" />
+          <div class="item logo" data-price="5 GEL" data-size="17">
+            <img src="images/earrings/earring-7.jpg" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
 
-          <div class="item design">
-            <img src="images/earrings/skull-moon.jpg" alt="image" />
+          <div class="item design" data-price="5 GEL" data-size="17">
+            <img src="images/earrings/earring-8.jpg" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
@@ -173,118 +172,125 @@
     </section>
 
     <!-- Modal Structure -->
-    <div class="modal" id="detailModal">
+    <div class="modal" id="detailModal" style="display: none">
       <div class="modal-content">
         <span class="close" id="closeModal">&times;</span>
         <img id="modalImage" src="" alt="Details Image" />
         <div class="details">
-          <p id="category">Category: earring</p>
-          <p id="size">Size: 3</p>
-          <p id="price">Price: 10 GEL</p>
-          <button id="heartButton"><img src="images/heart.png" style="width: 20px" alt="icon"> <span>Add to Favorites</span></button>
+          <p id="category">Category: Ring</p>
+          <p id="size">Size:</p>
+          <p id="price">Price:</p>
+          <button id="heartButton">
+            <img src="images/heart.png" style="width: 20px" alt="icon" />
+            <span>Add to Favorites</span>
+          </button>
         </div>
       </div>
     </div>
 
-<!-- footer section -->
+    <!-- footer section -->
 
-<footer class="footer">
-  <div class="mediaText">
-    <div>
-      <div class="footerLogo">
-        <a href="#"><img src="images/beksi1.svg" alt="logo" /></a>
-      </div>
-      <p class="mediaP">
-        Follow us on social media to be the first to know about our upcoming
-        events and promotions!
-      </p>
-    </div>
-    <div class="socMedia">
-      <a
-        href="https://www.instagram.com/onlineshopbeksi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-        target="_blank"
-      >
-        <img
-          src="images/instagram.png"
-          alt="instagram"
-          style="width: 45px"
-        />
-      </a>
-      <a href="https://www.facebook.com/" target="_blank">
-        <img src="images/facebook.png" alt="facebook" style="width: 30px" />
-      </a>
-      <a
-        href="mailto:beksishop@gmail.com?subject=The%20subject%20of%20the%20mail"
-        target="_blank"
-      >
-        <img src="images/email.png" alt="gmail" style="width: 50px" />
-      </a>
-      <a
-        class="tiktok-icon"
-        href="https://www.tiktok.com/@onlineshopbeksi?_t=8ofzGQyhcBT&_r=1"
-        target="_blank"
-      >
-        <img src="images/tiktokcopy.png" alt="tiktok" style="width: 40px" />
-      </a>
-    </div>
-  </div>
-  <div class="fullNav">
-    <nav class="footerNavigation">
-      <ul>
-        <li>
-          <a href="#">
-            <h4 class="nameh4">Shop</h4>
+    <footer class="footer">
+      <div class="mediaText">
+        <div>
+          <div class="footerLogo">
+            <a href="#"><img src="images/beksi1.svg" alt="logo" /></a>
+          </div>
+          <p class="mediaP">
+            Follow us on social media to be the first to know about our upcoming
+            events and promotions!
+          </p>
+        </div>
+        <div class="socMedia">
+          <a
+            href="https://www.instagram.com/onlineshopbeksi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+          >
+            <img
+              src="images/instagram.png"
+              alt="instagram"
+              style="width: 45px"
+            />
           </a>
-        </li>
-        <li><a class="list" href="#">About Us</a></li>
-        <li><a href="#">Categories</a></li>
-        <li><a href="#">Sale</a></li>
-      </ul>
-    </nav>
-    <nav class="footerNavigation">
-      <ul>
-        <li>
-          <a class="footerH4" href="#">
-            <h4>FAQs</h4>
+          <a href="https://www.facebook.com/" target="_blank">
+            <img src="images/facebook.png" alt="facebook" style="width: 30px" />
           </a>
-        </li>
-        <li><a href="#">Delivery</a></li>
-        <li><a href="#">Collaboration</a></li>
-        <li><a href="blog.html" target="_blank">Blog</a></li>
-      </ul>
-    </nav>
-    <nav class="footerNavigation">
-      <ul>
-        <li>
-          <a href="#">
-            <h4>Contact</h4>
-          </a>
-        </li>
-        <li><a href="tel:+99501010101">+995 01 010 101</a></li>
-        <li>
           <a
             href="mailto:beksishop@gmail.com?subject=The%20subject%20of%20the%20mail"
-            >beksishop@gmail.com</a
+            target="_blank"
           >
-        </li>
-        <li><a href="#">Tbilisi</a></li>
-      </ul>
-    </nav>
-  </div>
-</footer>
+            <img src="images/email.png" alt="gmail" style="width: 50px" />
+          </a>
+          <a
+            class="tiktok-icon"
+            href="https://www.tiktok.com/@onlineshopbeksi?_t=8ofzGQyhcBT&_r=1"
+            target="_blank"
+          >
+            <img src="images/tiktokcopy.png" alt="tiktok" style="width: 40px" />
+          </a>
+        </div>
+      </div>
+      <div class="fullNav">
+        <nav class="footerNavigation">
+          <ul>
+            <li>
+              <a href="#">
+                <h4>Shop</h4>
+              </a>
+            </li>
+            <li class="footerLists"><a class="list" href="#">About Us</a></li>
+            <li class="footerLists"><a href="#">Categories</a></li>
+            <li class="footerLists"><a href="#">Sale</a></li>
+          </ul>
+        </nav>
+        <nav class="footerNavigation">
+          <ul>
+            <li>
+              <a class="footerH4" href="#">
+                <h4>FAQs</h4>
+              </a>
+            </li>
+            <li class="footerLists"><a href="#">Delivery</a></li>
+            <li class="footerLists"><a href="#">Collaboration</a></li>
+            <li class="footerLists">
+              <a href="blog.html" target="_blank">Blog</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="footerNavigation">
+          <ul>
+            <li>
+              <a href="#">
+                <h4>Contact</h4>
+              </a>
+            </li>
+            <li class="footerLists">
+              <a href="tel:+99501010101">+995 01 010 101</a>
+            </li>
+            <li class="footerLists">
+              <a
+                href="mailto:beksishop@gmail.com?subject=The%20subject%20of%20the%20mail"
+                >beksishop@gmail.com</a
+              >
+            </li>
+            <li class="footerLists"><a href="#">Tbilisi</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
 
-<!-- footer section -->
+    <!-- last footer section -->
 
-<footer class="lastFooter">
-  <div class="footer-country">
-    <img src="images/white-earth-europe-solid.png" alt="icon" />
-    <span>Georgia</span>
-  </div>
-  <div class="footer2024">
-    <p>&copy; 2024 Beksi,</p>
-    <span>All rights reverved</span>
-  </div>
-</footer>
+    <footer class="lastFooter">
+      <div class="footer-country">
+        <img src="images/white-earth-europe-solid.png" alt="icon" />
+        <span>Georgia</span>
+      </div>
+      <div class="footer2024">
+        <p>&copy; 2024 Beksi,</p>
+        <span>All rights reverved</span>
+      </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
@@ -302,6 +308,55 @@
         $galleryContainer.isotope({
           filter: value,
         });
+      });
+
+      // Prices and Sizes
+
+      $(".overLay a").on("click", function (event) {
+        event.preventDefault(); // Prevent default anchor behavior
+
+        // Get the image source and data attributes from the clicked item
+        const imgSrc = $(this).closest(".item").find("img").attr("src");
+        const price = $(this).closest(".item").data("price");
+        const size = $(this).closest(".item").data("size");
+
+        // Set the modal image source and details
+        $("#modalImage").attr("src", imgSrc);
+        $("#price").text("Price: " + price);
+        $("#size").text("Size: " + size);
+
+        // Open the modal
+        $("#detailModal").css("display", "block");
+      });
+
+      // Close modal when close button is clicked
+      $("#closeModal").on("click", function () {
+        $("#detailModal").css("display", "none");
+      });
+
+      // Close modal when clicking outside the modal
+      $(window).on("click", function (event) {
+        if ($(event.target).is("#detailModal")) {
+          $("#detailModal").css("display", "none");
+        }
+      });
+
+      const showMoreButton = document.querySelector(".show-more");
+
+      // Function to disable the button
+      function disableButton() {
+        showMoreButton.classList.add("disabled");
+      }
+
+      // Function to enable the button
+      function enableButton() {
+        showMoreButton.classList.remove("disabled");
+      }
+
+      // Example usage: disable the button after it's clicked
+      showMoreButton.addEventListener("click", () => {
+        disableButton();
+        // Add your logic to load more photos here
       });
     </script>
     <script src="JS/script.js"></script>
