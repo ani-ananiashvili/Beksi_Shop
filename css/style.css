@@ -363,7 +363,7 @@ video {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 24px;
   font-weight: bold;
   opacity: 0;
@@ -542,7 +542,7 @@ video {
   }
 }
 
-/* rings page */
+/* categories page */
 
 .portfolio {
   width: 100%;
@@ -650,7 +650,7 @@ div.gallery .item:hover img {
   color: black;
 }
 
-/* ring responsive */
+/* categories page responsive */
 
 @media (max-width: 1024px) {
   div.gallery .item {
@@ -678,13 +678,11 @@ div.gallery .item:hover img {
   transition: background-color 0.3s;
 }
 
-
 .show-more.disabled {
-  background-color: rgb(200, 200, 200); 
-  color: rgba(255, 255, 255, 0.5); 
-  cursor: not-allowed; 
+  background-color: rgb(200, 200, 200);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: not-allowed;
 }
-
 
 .modal {
   display: none;
@@ -752,8 +750,6 @@ div.gallery .item:hover img {
   cursor: pointer;
 }
 
-
-
 /* blog page */
 
 .photo-container {
@@ -762,5 +758,46 @@ div.gallery .item:hover img {
   justify-content: center;
   display: flex;
   gap: 15px;
-  margin: 100px 0px;
+  margin: 40px 0px 40px;
+}
+
+.blogP {
+margin: 100px 0px 0px;
+text-align: center;
+display: flex;
+flex-direction: column;
+gap: 30px;
+}
+
+.blogP h1 {
+  font-size: 30px;
+}
+
+.blogP p {
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.blogP h2 {
+  font-size: 30px;
+  margin: 80px 0px 0px;
+}
+
+#showMoreButton {
+  width: 120px;
+  padding: 7px;
+}
+
+.blogButton {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* AboutUs page */
+
+.aboutUs p {
+  margin: 50px 0px;
+  text-align: center;
+  font-size: 24px;
 }

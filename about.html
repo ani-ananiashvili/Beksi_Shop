@@ -2,8 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="Acessories Online Shop - Beksi Shop" />
+    <meta name="keywords" content="shop, online, rings" />
+    <meta name="author" content="Ani Ananiashvili" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beksi Shop - NECKLACES</title>
+    <title>Beksi Shop</title>
     <link rel="icon" href="images/B2.jpg" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -52,7 +55,9 @@
             </ul>
           </li>
           <li class="nav-item"><a href="#" class="nav-link">SALE</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">ABOUT US</a></li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">ABOUT US</a>
+          </li>
           <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
         </ul>
         <div class="responsiveIcons">
@@ -97,98 +102,18 @@
       </div>
     </header>
 
-    <!-- necklaces section -->
-
-    <section class="portfolio">
-      <section class="section-head">
-        <h1>NECKLACES</h1>
+    <main>
+      <section class="aboutUs">
+        <p>
+          Welcome to the world of TBS glasses and optical frames. We create an
+          online store and offer optical services - here you will find hundreds
+          of fashionable and permanent glasses, frames for women and men, and
+          also order personalized glasses! Check out our offer and join the
+          community of satisfied customers. Our team will be happy to take care
+          of you.
+        </p>
       </section>
-
-      <main class="mainContainer">
-        <div class="button-group">
-          <button class="button active" data-filter="*">All</button>
-          <button class="button" data-filter=".skull">Skull</button>
-          <button class="button" data-filter=".cross">Cross</button>
-          <button class="button" data-filter=".other">Other</button>
-        </div>
-
-        <div class="gallery">
-          <div class="item skull" data-price="5 GEL" data-size="17">
-            <img src="images/necklaces/skull-moon.jpg" alt="image" />
-            <div class="overLay">
-              <a href="#">DETAILS</a>
-            </div>
-          </div>
-
-          <div class="item skull" data-price="9 GEL" data-size="16">
-            <img src="images/necklaces/skull1.jpg" alt="image" />
-            <div class="overLay">
-              <a href="#">DETAILS</a>
-            </div>
-          </div>
-
-          <div class="item design" data-price="5 GEL" data-size="17">
-            <img src="images/necklaces/elva.jpg" alt="image" />
-            <div class="overLay">
-              <a href="#">DETAILS</a>
-            </div>
-          </div>
-
-          <div class="item other" data-price="5 GEL" data-size="17">
-            <img src="images/necklaces/pent1.jpg" alt="image" />
-            <div class="overLay">
-              <a href="#">DETAILS</a>
-            </div>
-          </div>
-
-          <div class="item skull" data-price="5 GEL" data-size="17">
-            <img src="images/necklaces/skulpepela.jpg" alt="image" />
-            <div class="overLay">
-              <a href="#">DETAILS</a>
-            </div>
-          </div>
-
-          <div class="item cross" data-price="5 GEL" data-size="17">
-            <img src="images/necklaces/cross.jpg" alt="image" />
-            <div class="overLay">
-              <a href="#">DETAILS</a>
-            </div>
-          </div>
-
-          <div class="item other" data-price="5 GEL" data-size="17">
-            <img src="images/necklaces/oboba.jpg" alt="image" />
-            <div class="overLay">
-              <a href="#">DETAILS</a>
-            </div>
-          </div>
-
-          <div class="item other" data-price="5 GEL" data-size="17">
-            <img src="images/necklaces/snakee.jpg" alt="image" />
-            <div class="overLay">
-              <a href="#">DETAILS</a>
-            </div>
-          </div>
-        </div>
-        <button class="show-more">SHOW MORE</button>
-      </main>
-    </section>
-
-    <!-- Modal Structure -->
-    <div class="modal" id="detailModal" style="display: none">
-      <div class="modal-content">
-        <span class="close" id="closeModal">&times;</span>
-        <img id="modalImage" src="" alt="Details Image" />
-        <div class="details">
-          <p id="category">Category: Ring</p>
-          <p id="size">Size:</p>
-          <p id="price">Price:</p>
-          <button id="heartButton">
-            <img src="images/heart.png" style="width: 20px" alt="icon" />
-            <span>Add to Favorites</span>
-          </button>
-        </div>
-      </div>
-    </div>
+    </main>
 
     <!-- footer section -->
 
@@ -293,67 +218,6 @@
         <span>All rights reverved</span>
       </div>
     </footer>
-
-    <!-- filter -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
-    <script type="text/javascript">
-      const $galleryContainer = $(".gallery").isotope({
-        itemSelector: ".item",
-        layoutMode: "fitRows",
-      });
-
-      $(".button-group .button").on("click", function () {
-        $(".button-group .button").removeClass("active");
-        $(this).addClass("active");
-
-        const value = $(this).attr("data-filter");
-        $galleryContainer.isotope({
-          filter: value,
-        });
-      });
-
-      // Prices and Sizes
-
-      $(".overLay a").on("click", function (event) {
-        event.preventDefault();
-
-        const imgSrc = $(this).closest(".item").find("img").attr("src");
-        const price = $(this).closest(".item").data("price");
-        const size = $(this).closest(".item").data("size");
-
-        $("#modalImage").attr("src", imgSrc);
-        $("#price").text("Price: " + price);
-        $("#size").text("Size: " + size);
-
-        $("#detailModal").css("display", "block");
-      });
-
-      $("#closeModal").on("click", function () {
-        $("#detailModal").css("display", "none");
-      });
-
-      $(window).on("click", function (event) {
-        if ($(event.target).is("#detailModal")) {
-          $("#detailModal").css("display", "none");
-        }
-      });
-
-      const showMoreButton = document.querySelector(".show-more");
-
-      function disableButton() {
-        showMoreButton.classList.add("disabled");
-      }
-
-      function enableButton() {
-        showMoreButton.classList.remove("disabled");
-      }
-
-      showMoreButton.addEventListener("click", () => {
-        disableButton();
-      });
-    </script>
     <script src="JS/script.js"></script>
   </body>
 </html>

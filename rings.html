@@ -98,6 +98,7 @@
     </header>
 
     <!-- rings section -->
+
     <section class="portfolio">
       <section class="section-head">
         <h1>RINGS</h1>
@@ -106,69 +107,71 @@
       <main class="mainContainer">
         <div class="button-group">
           <button class="button active" data-filter="*">All</button>
-          <button class="button" data-filter=".design">Skull</button>
-          <button class="button" data-filter=".development">Snake</button>
-          <button class="button" data-filter=".logo">Other</button>
+          <button class="button" data-filter=".skull">Skull</button>
+          <button class="button" data-filter=".snake">Snake</button>
+          <button class="button" data-filter=".other">Other</button>
         </div>
 
         <div class="gallery">
-          <div class="item design" data-price="5 GEL" data-size="17">
-            <img src="images/skull_rings/skull-10.jpg" alt="image" />
+          <div class="item other" data-price="5 GEL" data-size="17">
+            <img src="images/rings/skull-10.jpg" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
 
-          <div class="item development" data-price="7 GEL" data-size="18">
-            <img src="images/snake_rings/snake-ring2.PNG" alt="image" />
+          <div class="item snake" data-price="7 GEL" data-size="18">
+            <img src="images/rings/snake-ring2.PNG" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
 
-          <div class="item design" data-price="6 GEL" data-size="16">
-            <img src="images/skull_rings/skull-11.jpg" alt="image" />
+          <div class="item other" data-price="6 GEL" data-size="16">
+            <img src="images/rings/skull-11.jpg" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
 
-          <div class="item logo" data-price="8 GEL" data-size="19">
-            <img src="images/snake_rings/snake-ring5.PNG" alt="image" />
+          <div class="item snake" data-price="8 GEL" data-size="19">
+            <img src="images/rings/snake-ring5.PNG" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
 
-          <div class="item design" data-price="4 GEL" data-size="15">
-            <img src="images/snake_rings/snake-ring7.PNG" alt="image" />
+          <div class="item snake" data-price="4 GEL" data-size="15">
+            <img src="images/rings/snake-ring7.PNG" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
 
-          <div class="item logo" data-price="9 GEL" data-size="20">
-            <img src="images/skull_rings/skull-5.jpg" alt="image" />
+          <div class="item skull" data-price="9 GEL" data-size="20">
+            <img src="images/rings/skull-5.jpg" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
 
-          <div class="item logo" data-price="10 GEL" data-size="21">
-            <img src="images/snake_rings/snake-ring6.PNG" alt="image" />
+          <div class="item snake" data-price="10 GEL" data-size="21">
+            <img src="images/rings/snake-ring6.PNG" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
 
-          <div class="item design" data-price="11 GEL" data-size="22">
-            <img src="images/skull_rings/skull-8.jpg" alt="image" />
+          <div class="item other" data-price="11 GEL" data-size="22">
+            <img src="images/rings/skull-8.jpg" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
         </div>
+
         <button class="show-more">SHOW MORE</button>
+
       </main>
     </section>
 
@@ -293,6 +296,8 @@
       </div>
     </footer>
 
+    <!-- filter -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
     <script type="text/javascript">
@@ -313,30 +318,24 @@
 
       // Prices and Sizes
 
-      // Show modal with details
       $(".overLay a").on("click", function (event) {
-        event.preventDefault(); // Prevent default anchor behavior
+        event.preventDefault();
 
-        // Get the image source and data attributes from the clicked item
         const imgSrc = $(this).closest(".item").find("img").attr("src");
         const price = $(this).closest(".item").data("price");
         const size = $(this).closest(".item").data("size");
 
-        // Set the modal image source and details
         $("#modalImage").attr("src", imgSrc);
         $("#price").text("Price: " + price);
         $("#size").text("Size: " + size);
 
-        // Open the modal
         $("#detailModal").css("display", "block");
       });
 
-      // Close modal when close button is clicked
       $("#closeModal").on("click", function () {
         $("#detailModal").css("display", "none");
       });
 
-      // Close modal when clicking outside the modal
       $(window).on("click", function (event) {
         if ($(event.target).is("#detailModal")) {
           $("#detailModal").css("display", "none");
@@ -345,20 +344,16 @@
 
       const showMoreButton = document.querySelector(".show-more");
 
-      // Function to disable the button
       function disableButton() {
         showMoreButton.classList.add("disabled");
       }
 
-      // Function to enable the button
       function enableButton() {
         showMoreButton.classList.remove("disabled");
       }
 
-      // Example usage: disable the button after it's clicked
       showMoreButton.addEventListener("click", () => {
         disableButton();
-        // Add your logic to load more photos here
       });
     </script>
     <script src="JS/script.js"></script>

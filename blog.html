@@ -13,9 +13,9 @@
     <!-- header section -->
 
     <section class="mainLogo">
-      <a href="index.html"
-        ><img class="beksi" src="images/beksi1.svg" alt="logo"
-      /></a>
+      <a href="index.html">
+        <img class="beksi" src="images/beksi1.svg" alt="logo" />
+      </a>
     </section>
 
     <header>
@@ -60,9 +60,9 @@
               <img src="images/white-skull.png" alt="icon" />
               <span class="tooltip" style="display: none">Registration</span>
             </a>
-            <a class="heart-img" href="#"
-              ><img src="images/white-heart.png" alt="icon"
-            /></a>
+            <a class="heart-img" href="#">
+              <img src="images/white-heart.png" alt="icon" />
+            </a>
           </div>
           <div class="hamburger">
             <span class="bar"></span>
@@ -96,9 +96,26 @@
       </div>
     </header>
 
-    <!-- fetch api testing -->
-
-    <div class="photo-container"></div>
+    <!-- Fetch API -->
+    <section>
+      <div class="blogP">
+        <h1>BLOG</h1>
+        <p>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+        <h2>IMAGES</h2>
+      </div>
+      <div class="photo-container"></div>
+      <div class="blogButton">
+        <button id="showMoreButton">Show More</button>
+      </div>
+    </section>
 
     <!-- footer section -->
 
@@ -200,29 +217,34 @@
       </div>
       <div class="footer2024">
         <p>&copy; 2024 Beksi,</p>
-        <span>All rights reverved</span>
+        <span>All rights reserved</span>
       </div>
     </footer>
 
     <script type="text/javascript">
-      // fetch api testing
+      // Fetch API
 
-      // script.js
-      const imageIds = [526, 529, 566, 861, 882, 884, 891, 1059]; // Array of image IDs
-      const photoContainer = document.querySelector(".photo-container"); // Select the photo container
+      const initialImageIds = [742, 552, 618, 878, 1064, 47, 363, 939];
+      const additionalImageIds = [942, 240, 68, 922, 945, 356, 781, 358];
+      const photoContainer = document.querySelector(".photo-container");
+      const showMoreButton = document.getElementById("showMoreButton");
 
-      // Function to fetch images by ID
       function fetchImages(ids) {
         ids.forEach((id) => {
-          const img = document.createElement("img"); // Create a new image element
-          img.src = `https://picsum.photos/id/${id}/300`; // Fetch the image directly
-          img.alt = `Image ID ${id}`; // Set a descriptive alt text
-          photoContainer.appendChild(img); // Append the image to the photo container
+          const img = document.createElement("img");
+          img.src = `https://picsum.photos/id/${id}/300`;
+          img.alt = `Image ID ${id}`;
+          photoContainer.appendChild(img);
         });
       }
 
-      // Call the function with the array of image IDs
-      fetchImages(imageIds);
+      fetchImages(initialImageIds);
+
+      showMoreButton.addEventListener("click", () => {
+        fetchImages(additionalImageIds);
+        showMoreButton.disabled = true;
+        showMoreButton.textContent = "No More Images";
+      });
     </script>
     <script src="JS/script.js"></script>
   </body>

@@ -292,6 +292,8 @@
       </div>
     </footer>
 
+    <!-- filter -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
     <script type="text/javascript">
@@ -313,28 +315,23 @@
       // Prices and Sizes
 
       $(".overLay a").on("click", function (event) {
-        event.preventDefault(); // Prevent default anchor behavior
+        event.preventDefault();
 
-        // Get the image source and data attributes from the clicked item
         const imgSrc = $(this).closest(".item").find("img").attr("src");
         const price = $(this).closest(".item").data("price");
         const size = $(this).closest(".item").data("size");
 
-        // Set the modal image source and details
         $("#modalImage").attr("src", imgSrc);
         $("#price").text("Price: " + price);
         $("#size").text("Size: " + size);
 
-        // Open the modal
         $("#detailModal").css("display", "block");
       });
 
-      // Close modal when close button is clicked
       $("#closeModal").on("click", function () {
         $("#detailModal").css("display", "none");
       });
 
-      // Close modal when clicking outside the modal
       $(window).on("click", function (event) {
         if ($(event.target).is("#detailModal")) {
           $("#detailModal").css("display", "none");
@@ -343,20 +340,16 @@
 
       const showMoreButton = document.querySelector(".show-more");
 
-      // Function to disable the button
       function disableButton() {
         showMoreButton.classList.add("disabled");
       }
 
-      // Function to enable the button
       function enableButton() {
         showMoreButton.classList.remove("disabled");
       }
 
-      // Example usage: disable the button after it's clicked
       showMoreButton.addEventListener("click", () => {
         disableButton();
-        // Add your logic to load more photos here
       });
     </script>
     <script src="JS/script.js"></script>
