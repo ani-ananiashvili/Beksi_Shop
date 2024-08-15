@@ -54,14 +54,16 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item"><a href="#" class="nav-link">SALE</a></li>
+          <li class="nav-item sale"><a href="#" class="nav-link">SALE</a></li>
           <li class="nav-item">
             <a href="about.html" target="_blank" class="nav-link">ABOUT US</a>
           </li>
           <li class="nav-item">
             <a href="blog.html" target="_blank" class="nav-link">BLOG</a>
           </li>
-          <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
+          <li class="nav-item contact">
+            <a href="#" class="nav-link">CONTACT</a>
+          </li>
         </ul>
         <div class="responsiveIcons">
           <div class="headerIcons">
@@ -69,9 +71,10 @@
               <img src="images/white-skull.png" alt="icon" />
               <span class="tooltip" style="display: none">Registration</span>
             </a>
-            <a class="heart-img" href="#"
-              ><img src="images/white-heart.png" alt="icon"
-            /></a>
+            <a class="heart-img" href="#">
+              <img src="images/white-heart.png" alt="icon" />
+              <span class="tooltip2">Favorites</span>
+            </a>
           </div>
           <div class="hamburger">
             <span class="bar"></span>
@@ -123,12 +126,15 @@
           />
           Your browser does not support the video tag.
         </video>
-        <div class="search-form" id="searchForm">
-          <input type="text" placeholder="Search..." />
-          <button type="submit" class="search-icon">
-            <img src="images/search.svg" alt="Search" />
+        <form class="search-form" id="searchForm">
+          <input type="text" id="searchInput" placeholder="Search..." />
+          <button type="button" id="deleteButton" style="display: none">
+            &times;
           </button>
-        </div>
+          <button type="submit" class="search-icon" id="searchButton">
+            <img src="images/search.svg" alt="search" />
+          </button>
+        </form>
       </div>
 
       <!-- categories section -->
@@ -169,7 +175,7 @@
       <div class="mediaText">
         <div>
           <div class="footerLogo">
-            <a href="#"><img src="images/beksi1.svg" alt="logo" /></a>
+            <a href="index.html"><img src="images/beksi1.svg" alt="logo" /></a>
           </div>
           <p class="mediaP">
             Follow us on social media to be the first to know about our upcoming
@@ -183,7 +189,7 @@
           >
             <img
               src="images/instagram.png"
-              alt="instagram"
+              alt="https://www.instagram.com"
               style="width: 45px"
             />
           </a>
@@ -201,7 +207,7 @@
             href="https://www.tiktok.com/@onlineshopbeksi?_t=8ofzGQyhcBT&_r=1"
             target="_blank"
           >
-            <img src="images/tiktokcopy.png" alt="tiktok" style="width: 40px" />
+            <img src="images/tiktokcopy.png" alt="TikTok" style="width: 40px" />
           </a>
         </div>
       </div>
@@ -213,23 +219,25 @@
                 <h4>Shop</h4>
               </a>
             </li>
-            <li class="footerLists"><a class="list" href="#">About Us</a></li>
+            <li class="footerLists">
+              <a class="list" href="about.html" target="_blank">About Us</a>
+            </li>
             <li class="footerLists"><a href="#">Categories</a></li>
-            <li class="footerLists"><a href="#">Sale</a></li>
+            <li class="footerLists">
+              <a href="blog.html" target="_blank">Blog</a>
+            </li>
           </ul>
         </nav>
         <nav class="footerNavigation">
           <ul>
             <li>
-              <a class="footerH4" href="#">
+              <a href="#">
                 <h4>FAQs</h4>
               </a>
             </li>
             <li class="footerLists"><a href="#">Delivery</a></li>
             <li class="footerLists"><a href="#">Collaboration</a></li>
-            <li class="footerLists">
-              <a href="blog.html" target="_blank">Blog</a>
-            </li>
+            <li class="footerLists"><a href="#">Sale</a></li>
           </ul>
         </nav>
         <nav class="footerNavigation">
@@ -266,6 +274,7 @@
         <span>All rights reverved</span>
       </div>
     </footer>
+
     <script src="JS/script.js"></script>
   </body>
 </html>

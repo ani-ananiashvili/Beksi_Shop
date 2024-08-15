@@ -4,16 +4,16 @@
 
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
-const header = document.querySelector(".nav-bar"); 
+const header = document.querySelector(".nav-bar");
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
-  
+
   if (navMenu.classList.contains("active")) {
-    header.style.transform = "translateY(-100%)"; 
+    header.style.transform = "translateY(-100%)";
   } else {
-    header.style.transform = "translateY(0)"; 
+    header.style.transform = "translateY(0)";
   }
 });
 
@@ -21,10 +21,9 @@ document.querySelectorAll(".nav-link").forEach((n) =>
   n.addEventListener("click", () => {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
-    header.style.transform = "translateY(0)"; 
+    header.style.transform = "translateY(0)";
   })
 );
-
 
 // dropdown menu
 const categoriesLink = document.getElementById("categoriesLink");
@@ -105,10 +104,13 @@ registrationForm.addEventListener("submit", (event) => {
   video.play();
 });
 
-// lighting animation & search
+// Lighting animation & Search form function
 
 const videoContainer = document.querySelector(".video-container");
 const searchForm = document.getElementById("searchForm");
+const searchInput = document.getElementById("searchInput");
+const searchButton = document.getElementById("searchButton");
+const deleteButton = document.getElementById("deleteButton");
 
 videoContainer.addEventListener("mouseover", () => {
   searchForm.style.display = "block";
@@ -116,4 +118,58 @@ videoContainer.addEventListener("mouseover", () => {
 
 videoContainer.addEventListener("mouseout", () => {
   searchForm.style.display = "none";
+});
+
+searchForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const input = searchInput.value.toLowerCase().trim();
+  const pages = {
+    ring: "rings.html",
+    rings: "rings.html",
+    "skull ring": "rings.html",
+    "skull rings": "rings.html",
+    "snake ring": "rings.html",
+    "snake rings": "rings.html",
+    earring: "earrings.html",
+    earrings: "earrings.html",
+    "skull earring": "earrings.html",
+    "skull earrings": "earrings.html",
+    "snake earring": "earrings.html",
+    "snake earrings": "earrings.html",
+    "sword earring": "earrings.html",
+    "sword earrings": "earrings.html",
+    necklace: "necklaces.html",
+    necklaces: "necklaces.html",
+    "skull necklace": "necklaces.html",
+    "skull necklaces": "necklaces.html",
+    "sword necklace": "necklaces.html",
+    "sword necklaces": "necklaces.html",
+    "snake necklace": "necklaces.html",
+    "snake necklaces": "necklaces.html",
+    chain: "chains.html",
+    chains: "chains.html",
+    "waist chain": "chains.html",
+    "waist chains": "chains.html",
+    "pant chain": "chains.html",
+    "pant chains": "chains.html",
+    "brooch chain": "chains.html",
+    "brooch chains": "chains.html",
+    brooch: "chains.html",
+  };
+
+  const page = Object.keys(pages).find((key) => input.includes(key));
+
+  if (page) {
+    window.location.href = pages[page];
+  }
+});
+
+searchButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  searchForm.dispatchEvent(new Event("submit"));
+});
+
+deleteButton.addEventListener("click", () => {
+  searchInput.value = "";
 });

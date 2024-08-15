@@ -6,7 +6,7 @@
     <meta name="keywords" content="shop, online, rings" />
     <meta name="author" content="Ani Ananiashvili" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beksi Shop</title>
+    <title>Beksi Shop - ABOUT US</title>
     <link rel="icon" href="images/B2.jpg" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -44,7 +44,7 @@
               </li>
               <li>
                 <a href="necklaces.html" target="_blank" class="dropdown-item"
-                  >NECKLACE</a
+                  >NECKLACES</a
                 >
               </li>
               <li>
@@ -54,11 +54,16 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item"><a href="#" class="nav-link">SALE</a></li>
+          <li class="nav-item sale"><a href="#" class="nav-link">SALE</a></li>
           <li class="nav-item">
-            <a href="about.html" class="nav-link">ABOUT US</a>
+            <a href="about.html" target="_blank" class="nav-link">ABOUT US</a>
           </li>
-          <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
+          <li class="nav-item">
+            <a href="blog.html" target="_blank" class="nav-link">BLOG</a>
+          </li>
+          <li class="nav-item contact">
+            <a href="#" class="nav-link">CONTACT</a>
+          </li>
         </ul>
         <div class="responsiveIcons">
           <div class="headerIcons">
@@ -66,9 +71,10 @@
               <img src="images/white-skull.png" alt="icon" />
               <span class="tooltip" style="display: none">Registration</span>
             </a>
-            <a class="heart-img" href="#"
-              ><img src="images/white-heart.png" alt="icon"
-            /></a>
+            <a class="heart-img" href="#">
+              <img src="images/white-heart.png" alt="icon" />
+              <span class="tooltip2">Favorites</span>
+            </a>
           </div>
           <div class="hamburger">
             <span class="bar"></span>
@@ -102,16 +108,38 @@
       </div>
     </header>
 
+    <!-- About Us -->
+
     <main>
       <section class="aboutUs">
-        <p>
-          Welcome to the world of TBS glasses and optical frames. We create an
-          online store and offer optical services - here you will find hundreds
-          of fashionable and permanent glasses, frames for women and men, and
-          also order personalized glasses! Check out our offer and join the
-          community of satisfied customers. Our team will be happy to take care
-          of you.
-        </p>
+        <img src="images/aboutUsImage.jpg" alt="image" />
+        <div class="aboutUsP">
+          <h1>ABOUT US</h1>
+          <p>
+            Welcome to Beksi, your destination for grunge jewelry that captures
+            the essence of individuality and self-expression. We believe that
+            jewelry should be as unique as the person wearing it, and our pieces
+            are designed to reflect the bold spirit of the grunge culture.
+          </p>
+          <p>
+            At Beksi, we embrace the beauty of imperfection. Our collection
+            features a range of striking designs, from edgy rings to layered
+            necklaces, all crafted to help you showcase your unique style.
+            Whether you’re dressing up for a night out or adding an effortless
+            edge to your everyday look, our jewelry is made for those who dare
+            to be different.
+          </p>
+          <p>
+            Beksi is more than just a jewelry shop; it's a community for those
+            who celebrate authenticity and express themselves freely. We invite
+            you to explore our collection and discover pieces that resonate with
+            your personal journey.
+          </p>
+          <p>
+            Join us in redefining what jewelry means - let it be a reflection of
+            who you are.
+          </p>
+        </div>
       </section>
     </main>
 
@@ -121,7 +149,7 @@
       <div class="mediaText">
         <div>
           <div class="footerLogo">
-            <a href="#"><img src="images/beksi1.svg" alt="logo" /></a>
+            <a href="index.html"><img src="images/beksi1.svg" alt="logo" /></a>
           </div>
           <p class="mediaP">
             Follow us on social media to be the first to know about our upcoming
@@ -135,7 +163,7 @@
           >
             <img
               src="images/instagram.png"
-              alt="instagram"
+              alt="https://www.instagram.com"
               style="width: 45px"
             />
           </a>
@@ -153,7 +181,7 @@
             href="https://www.tiktok.com/@onlineshopbeksi?_t=8ofzGQyhcBT&_r=1"
             target="_blank"
           >
-            <img src="images/tiktokcopy.png" alt="tiktok" style="width: 40px" />
+            <img src="images/tiktokcopy.png" alt="TikTok" style="width: 40px" />
           </a>
         </div>
       </div>
@@ -165,23 +193,25 @@
                 <h4>Shop</h4>
               </a>
             </li>
-            <li class="footerLists"><a class="list" href="#">About Us</a></li>
+            <li class="footerLists">
+              <a class="list" href="about.html" target="_blank">About Us</a>
+            </li>
             <li class="footerLists"><a href="#">Categories</a></li>
-            <li class="footerLists"><a href="#">Sale</a></li>
+            <li class="footerLists">
+              <a href="blog.html" target="_blank">Blog</a>
+            </li>
           </ul>
         </nav>
         <nav class="footerNavigation">
           <ul>
             <li>
-              <a class="footerH4" href="#">
+              <a href="#">
                 <h4>FAQs</h4>
               </a>
             </li>
             <li class="footerLists"><a href="#">Delivery</a></li>
             <li class="footerLists"><a href="#">Collaboration</a></li>
-            <li class="footerLists">
-              <a href="blog.html" target="_blank">Blog</a>
-            </li>
+            <li class="footerLists"><a href="#">Sale</a></li>
           </ul>
         </nav>
         <nav class="footerNavigation">
@@ -218,6 +248,7 @@
         <span>All rights reverved</span>
       </div>
     </footer>
+    
     <script src="JS/script.js"></script>
   </body>
 </html>

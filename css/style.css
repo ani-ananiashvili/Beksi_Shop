@@ -33,6 +33,25 @@ body {
   width: 45px;
 }
 
+.tooltip2 {
+  visibility: hidden;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-6%);
+  z-index: 1;
+}
+
+.heart-img:hover .tooltip2 {
+  visibility: visible;
+}
+
 a {
   color: white;
 }
@@ -42,7 +61,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 25px 0 20px;
+  padding: 0 20px 0 20px;
   transition: transform 0.3s ease;
 }
 
@@ -122,7 +141,19 @@ a {
 
 /* header responsive */
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
+  .sale,
+  .contact {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .sale,
+  .contact {
+    display: flex;
+  }
+
   .headerIcons,
   #categoriesDropdown {
     display: none;
@@ -158,7 +189,7 @@ a {
     flex-direction: column;
     background-color: black;
     width: 100%;
-    margin-top: 80px;
+    margin-top: 110px;
     text-align: center;
     transition: 0.3s;
   }
@@ -274,7 +305,7 @@ a {
 /* lighting animation & search */
 
 .video-container {
-  margin-top: 90px;
+  margin-top: 100px;
   position: relative;
   width: 100%;
   height: 300px;
@@ -481,10 +512,7 @@ video {
     display: none;
   }
 
-  .footerNavigation ul li:first-child a {
-    display: block;
-  }
-
+  .footerNavigation ul li:first-child a,
   .footerNavigation ul li:first-child a h4 {
     display: block;
   }
@@ -547,7 +575,7 @@ video {
 .portfolio {
   width: 100%;
   margin: 0 auto;
-  padding: 30px 7%;
+  padding: 40px 7%;
 }
 
 .portfolio .section-head {
@@ -607,7 +635,7 @@ div.gallery .item {
 
 .item img {
   width: 300px;
-  height: 100%;
+  height: 300px;
   object-fit: cover;
   display: block;
   transition: 0.3s;
@@ -752,35 +780,54 @@ div.gallery .item:hover img {
 
 /* blog page */
 
+.blogP {
+  margin: 100px 0px;
+  text-align: center;
+}
+
+.blogP h1 {
+  font-size: 30px;
+  display: inline;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.blogP h1::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.9px;
+  background: white;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+}
+
+.blogP h2 {
+  font-size: 28px;
+  margin: 40px 0;
+}
+
+.blogP p {
+  max-width: 950px;
+  text-align: justify;
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+.blogP :last-child {
+  text-align: center;
+}
+
 .photo-container {
   width: 100%;
   flex-wrap: wrap;
   justify-content: center;
   display: flex;
   gap: 15px;
-  margin: 40px 0px 40px;
-}
-
-.blogP {
-margin: 100px 0px 0px;
-text-align: center;
-display: flex;
-flex-direction: column;
-gap: 30px;
-}
-
-.blogP h1 {
-  font-size: 30px;
-}
-
-.blogP p {
-  font-size: 20px;
-  line-height: 1.7;
-}
-
-.blogP h2 {
-  font-size: 30px;
-  margin: 80px 0px 0px;
+  margin: 40px 0px;
 }
 
 #showMoreButton {
@@ -794,10 +841,46 @@ gap: 30px;
   margin-bottom: 30px;
 }
 
-/* AboutUs page */
+/* About page */
+
+.aboutUs {
+  margin: 120px 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.aboutUsP {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+.aboutUs h1 {
+  text-align: center;
+  font-size: 26px;
+  position: relative;
+  display: inline;
+  margin-bottom: 20px;
+}
+
+.aboutUs h1::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.9px;
+  background: white;
+  position: absolute;
+  left: 1px;
+  bottom: -6px;
+}
 
 .aboutUs p {
-  margin: 50px 0px;
-  text-align: center;
-  font-size: 24px;
+  text-align: justify;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  line-height: 1.5;
 }

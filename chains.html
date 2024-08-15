@@ -11,89 +11,100 @@
   </head>
 
   <body>
-    <!-- header section -->
 
-    <section class="mainLogo">
-      <a href="index.html"
-        ><img class="beksi" src="images/beksi1.svg" alt="logo"
-      /></a>
-    </section>
+<!-- header section -->
 
-    <header>
-      <nav class="nav-bar">
-        <a href="#"><img src="images/B2copy.png" alt="logo" /></a>
-        <ul class="nav-menu">
-          <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
-          <li class="nav-item">
-            <a href="#" class="nav-link" id="categoriesLink">CATEGORIES</a>
-            <ul class="dropdown-menu" id="categoriesDropdown">
-              <li>
-                <a href="rings.html" target="_blank" class="dropdown-item"
-                  >RINGS</a
-                >
-              </li>
-              <li>
-                <a href="earrings.html" target="_blank" class="dropdown-item"
-                  >EARRINGS</a
-                >
-              </li>
-              <li>
-                <a href="necklaces.html" target="_blank" class="dropdown-item"
-                  >NECKLACE</a
-                >
-              </li>
-              <li>
-                <a href="chains.html" target="_blank" class="dropdown-item"
-                  >CHAINS</a
-                >
-              </li>
-            </ul>
+<section class="mainLogo">
+  <a href="index.html"
+    ><img class="beksi" src="images/beksi1.svg" alt="logo"
+  /></a>
+</section>
+
+<header>
+  <nav class="nav-bar">
+    <a href="index.html"><img src="images/B2copy.png" alt="logo" /></a>
+    <ul class="nav-menu">
+      <li class="nav-item">
+        <a href="index.html" class="nav-link">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link" id="categoriesLink">CATEGORIES</a>
+        <ul class="dropdown-menu" id="categoriesDropdown">
+          <li>
+            <a href="rings.html" target="_blank" class="dropdown-item"
+              >RINGS</a
+            >
           </li>
-          <li class="nav-item"><a href="#" class="nav-link">SALE</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">ABOUT US</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
+          <li>
+            <a href="earrings.html" target="_blank" class="dropdown-item"
+              >EARRINGS</a
+            >
+          </li>
+          <li>
+            <a href="necklaces.html" target="_blank" class="dropdown-item"
+              >NECKLACES</a
+            >
+          </li>
+          <li>
+            <a href="chains.html" target="_blank" class="dropdown-item"
+              >CHAINS</a
+            >
+          </li>
         </ul>
-        <div class="responsiveIcons">
-          <div class="headerIcons">
-            <a class="skull-img" href="#" id="registrationIcon">
-              <img src="images/white-skull.png" alt="icon" />
-              <span class="tooltip" style="display: none">Registration</span>
-            </a>
-            <a class="heart-img" href="#"
-              ><img src="images/white-heart.png" alt="icon"
-            /></a>
-          </div>
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-        </div>
-      </nav>
-
-      <!-- registration -->
-
-      <div id="registrationOverlay" class="overlay">
-        <div class="registrationFormContainer">
-          <div class="formHeader">
-            <h2>Registration</h2>
-            <button id="closeForm" class="closeButton">&times;</button>
-          </div>
-          <form id="registrationForm" novalidate>
-            <input type="email" id="email" placeholder="Email" required />
-            <span class="error-message" id="emailError"></span>
-            <input
-              type="password"
-              id="password"
-              placeholder="Password"
-              required
-            />
-            <span class="error-message" id="passwordError"></span>
-            <button type="submit" class="signUp">SIGN UP</button>
-          </form>
-        </div>
+      </li>
+      <li class="nav-item sale"><a href="#" class="nav-link">SALE</a></li>
+      <li class="nav-item">
+        <a href="about.html" target="_blank" class="nav-link">ABOUT US</a>
+      </li>
+      <li class="nav-item">
+        <a href="blog.html" target="_blank" class="nav-link">BLOG</a>
+      </li>
+      <li class="nav-item contact">
+        <a href="#" class="nav-link">CONTACT</a>
+      </li>
+    </ul>
+    <div class="responsiveIcons">
+      <div class="headerIcons">
+        <a class="skull-img" href="#" id="registrationIcon">
+          <img src="images/white-skull.png" alt="icon" />
+          <span class="tooltip" style="display: none">Registration</span>
+        </a>
+        <a class="heart-img" href="#">
+          <img src="images/white-heart.png" alt="icon" />
+          <span class="tooltip2">Favorites</span>
+        </a>
       </div>
-    </header>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- registration -->
+
+  <div id="registrationOverlay" class="overlay">
+    <div class="registrationFormContainer">
+      <div class="formHeader">
+        <h2>Registration</h2>
+        <button id="closeForm" class="closeButton">&times;</button>
+      </div>
+      <form id="registrationForm" novalidate>
+        <input type="email" id="email" placeholder="Email" required />
+        <span class="error-message" id="emailError"></span>
+        <input
+          type="password"
+          id="password"
+          placeholder="Password"
+          required
+        />
+        <span class="error-message" id="passwordError"></span>
+        <button type="submit" class="signUp">SIGN UP</button>
+      </form>
+    </div>
+  </div>
+</header>
 
     <!-- chains section -->
 
@@ -105,68 +116,122 @@
       <main class="mainContainer">
         <div class="button-group">
           <button class="button active" data-filter="*">All</button>
-          <button class="button" data-filter=".design">Skull</button>
-          <button class="button" data-filter=".development">Snake</button>
-          <button class="button" data-filter=".logo">Other</button>
+          <button class="button" data-filter=".waist">Waist</button>
+          <button class="button" data-filter=".pant">Pant</button>
+          <button class="button" data-filter=".brooch">brooch</button>
         </div>
 
         <div class="gallery">
-          <div class="item development" data-price="5 GEL" data-size="17">
+          <!-- div 1 -->
+
+          <div class="item pant waist" data-price="5 GEL" data-size="17">
             <img src="images/chains/chain-4.jpg" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
 
-          <div class="item design" data-price="5 GEL" data-size="17">
+          <!-- div 2 -->
+
+          <div class="item waist" data-price="5 GEL" data-size="17">
+            <img src="images/chains/waist4.jpg" alt="image" />
+            <div class="overLay">
+              <a href="#">DETAILS</a>
+            </div>
+          </div>
+
+          <!-- div 3 -->
+
+          <div class="item pant" data-price="5 GEL" data-size="17">
             <img src="images/chains/chain-3.jpg" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
 
-          <div class="item design" data-price="5 GEL" data-size="17">
-            <img src="images/chains/chain5.jpg" alt="image" />
+          <!-- div 4 -->
+
+          <div class="item waist" data-price="5 GEL" data-size="17">
+            <img src="images/chains/waist2.jpg" alt="image" />
+
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
 
-          <div class="item logo" data-price="5 GEL" data-size="17">
-            <img src="images/chains/chain-2.jpg" alt="image" />
+          <!-- div 5 -->
+
+          <div class="item brooch" data-price="5 GEL" data-size="17">
+            <img src="images/chains/brooch1.jpg" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
 
-          <div class="item design" data-price="5 GEL" data-size="17">
-            <img src="images/chains/chain.6.jpg" alt="image" />
-            <div class="overLay">
-              <a href="#">DETAILS</a>
-            </div>
-          </div>
+          <!-- div 6 -->
 
-          <div class="item logo" data-price="5 GEL" data-size="17">
+          <div class="item waist" data-price="5 GEL" data-size="17">
             <img src="images/chains/chain-8.jpg" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
 
-          <div class="item design" data-price="5 GEL" data-size="17">
-            <img src="images/chains/chain-7.jpg" alt="image" />
+          <!-- div 7 -->
+
+          <div class="item waist" data-price="5 GEL" data-size="17">
+            <img src="images/chains/waist.jpg" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
 
-          <div class="item development" data-price="5 GEL" data-size="17">
+          <!-- div 8 -->
+
+          <div class="item pant" data-price="5 GEL" data-size="17">
+            <img src="images/chains/chaincross.jpg" alt="image" />
+            <div class="overLay">
+              <a href="#">DETAILS</a>
+            </div>
+          </div>
+
+          <!-- div 9 -->
+
+          <div class="item pant" data-price="5 GEL" data-size="17">
+            <img src="images/chains/chain.6.jpg" alt="image" />
+            <div class="overLay">
+              <a href="#">DETAILS</a>
+            </div>
+          </div>
+
+          <!-- div 10 -->
+
+          <div class="item waist" data-price="5 GEL" data-size="17">
+            <img src="images/chains/waist3.jpg" alt="image" />
+            <div class="overLay">
+              <a href="#">DETAILS</a>
+            </div>
+          </div>
+
+          <!-- div 11 -->
+
+          <div class="item pant" data-price="5 GEL" data-size="17">
             <img src="images/chains/chain-1.jpg" alt="image" />
             <div class="overLay">
               <a href="#">DETAILS</a>
             </div>
           </div>
+
+          <!-- div 12 -->
+
+          <div class="item brooch" data-price="5 GEL" data-size="17">
+            <img src="images/chains/brooch2.jpg" alt="image" />
+            <div class="overLay">
+              <a href="#">DETAILS</a>
+            </div>
+          </div>
         </div>
+
         <button class="show-more">SHOW MORE</button>
       </main>
     </section>
@@ -177,7 +242,7 @@
         <span class="close" id="closeModal">&times;</span>
         <img id="modalImage" src="" alt="Details Image" />
         <div class="details">
-          <p id="category">Category: Ring</p>
+          <p id="category">Category: Chain</p>
           <p id="size">Size:</p>
           <p id="price">Price:</p>
           <button id="heartButton">
@@ -188,13 +253,13 @@
       </div>
     </div>
 
-    <!-- footer section -->
+   <!-- footer section -->
 
     <footer class="footer">
       <div class="mediaText">
         <div>
           <div class="footerLogo">
-            <a href="#"><img src="images/beksi1.svg" alt="logo" /></a>
+            <a href="index.html"><img src="images/beksi1.svg" alt="logo" /></a>
           </div>
           <p class="mediaP">
             Follow us on social media to be the first to know about our upcoming
@@ -208,7 +273,7 @@
           >
             <img
               src="images/instagram.png"
-              alt="instagram"
+              alt="https://www.instagram.com"
               style="width: 45px"
             />
           </a>
@@ -226,7 +291,7 @@
             href="https://www.tiktok.com/@onlineshopbeksi?_t=8ofzGQyhcBT&_r=1"
             target="_blank"
           >
-            <img src="images/tiktokcopy.png" alt="tiktok" style="width: 40px" />
+            <img src="images/tiktokcopy.png" alt="TikTok" style="width: 40px" />
           </a>
         </div>
       </div>
@@ -238,23 +303,25 @@
                 <h4>Shop</h4>
               </a>
             </li>
-            <li class="footerLists"><a class="list" href="#">About Us</a></li>
+            <li class="footerLists">
+              <a class="list" href="about.html" target="_blank">About Us</a>
+            </li>
             <li class="footerLists"><a href="#">Categories</a></li>
-            <li class="footerLists"><a href="#">Sale</a></li>
+            <li class="footerLists">
+              <a href="blog.html" target="_blank">Blog</a>
+            </li>
           </ul>
         </nav>
         <nav class="footerNavigation">
           <ul>
             <li>
-              <a class="footerH4" href="#">
+              <a href="#">
                 <h4>FAQs</h4>
               </a>
             </li>
             <li class="footerLists"><a href="#">Delivery</a></li>
             <li class="footerLists"><a href="#">Collaboration</a></li>
-            <li class="footerLists">
-              <a href="blog.html" target="_blank">Blog</a>
-            </li>
+            <li class="footerLists"><a href="#">Sale</a></li>
           </ul>
         </nav>
         <nav class="footerNavigation">
@@ -292,66 +359,12 @@
       </div>
     </footer>
 
-    <!-- filter -->
+    <!-- filter JS -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
-    <script type="text/javascript">
-      const $galleryContainer = $(".gallery").isotope({
-        itemSelector: ".item",
-        layoutMode: "fitRows",
-      });
-
-      $(".button-group .button").on("click", function () {
-        $(".button-group .button").removeClass("active");
-        $(this).addClass("active");
-
-        const value = $(this).attr("data-filter");
-        $galleryContainer.isotope({
-          filter: value,
-        });
-      });
-
-      // Prices and Sizes
-
-      $(".overLay a").on("click", function (event) {
-        event.preventDefault();
-
-        const imgSrc = $(this).closest(".item").find("img").attr("src");
-        const price = $(this).closest(".item").data("price");
-        const size = $(this).closest(".item").data("size");
-
-        $("#modalImage").attr("src", imgSrc);
-        $("#price").text("Price: " + price);
-        $("#size").text("Size: " + size);
-
-        $("#detailModal").css("display", "block");
-      });
-
-      $("#closeModal").on("click", function () {
-        $("#detailModal").css("display", "none");
-      });
-
-      $(window).on("click", function (event) {
-        if ($(event.target).is("#detailModal")) {
-          $("#detailModal").css("display", "none");
-        }
-      });
-
-      const showMoreButton = document.querySelector(".show-more");
-
-      function disableButton() {
-        showMoreButton.classList.add("disabled");
-      }
-
-      function enableButton() {
-        showMoreButton.classList.remove("disabled");
-      }
-
-      showMoreButton.addEventListener("click", () => {
-        disableButton();
-      });
-    </script>
+    <script src="JS/filter.js"></script>
     <script src="JS/script.js"></script>
+  </body>
   </body>
 </html>
