@@ -69,6 +69,8 @@ registrationIcon.addEventListener("click", (e) => {
 function clearRegistrationFields() {
   document.getElementById("email").value = "";
   document.getElementById("password").value = "";
+  document.getElementById("emailError").textContent = "";
+  document.getElementById("passwordError").textContent = "";
 }
 
 closeFormButton.addEventListener("click", () => {
@@ -86,22 +88,54 @@ registrationForm.addEventListener("submit", (event) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
 
+  let valid = true;
+
+  document.getElementById("emailError").textContent = "";
+  document.getElementById("passwordError").textContent = "";
+
   if (!emailRegex.test(email)) {
-    alert("Please enter a valid email address.");
-    return;
+    document.getElementById("emailError").textContent =
+      "Please enter a valid email address.";
+    valid = false;
+    document.getElementById("email").focus();
   }
 
   if (!passwordRegex.test(password)) {
-    alert(
-      "Password must be at least 6 characters long and contain at least one letter and one number."
-    );
-    return;
+    document.getElementById("passwordError").textContent =
+      "Password must be at least 6 characters long and contain at least one letter and one number.";
+    valid = false;
+    if (valid) {
+      document.getElementById("password").focus();
+    }
   }
 
-  alert("Registration successful!");
+  if (valid) {
+    alert("Registration successful!");
+    clearRegistrationFields();
+    registrationOverlay.classList.remove("active");
+    video.play();
+  }
+});
 
-  registrationOverlay.classList.remove("active");
-  video.play();
+document.getElementById("email").addEventListener("input", () => {
+  document.getElementById("emailError").textContent = "";
+});
+
+document.getElementById("password").addEventListener("input", () => {
+  document.getElementById("passwordError").textContent = "";
+});
+
+document.getElementById("email").addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("password").focus();
+  }
+});
+
+document.getElementById("password").addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    registrationForm.dispatchEvent(new Event("submit"));
+  }
 });
 
 // Lighting animation & Search form function

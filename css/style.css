@@ -302,6 +302,13 @@ a {
   background: rgb(82, 82, 82);
 }
 
+.error-message {
+  color: rgb(152, 43, 43);
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+
 /* lighting animation & search */
 
 .video-container {
