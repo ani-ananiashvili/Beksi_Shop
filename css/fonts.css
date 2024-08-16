@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'STIX-Two-Text';
+    src: url('../fonts/STIXTwoText.eot');
+    src: url('../fonts/STIXTwoText.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/STIXTwoText.woff2') format('woff2'),
+        url('../fonts/STIXTwoText.woff') format('woff'),
+        url('../fonts/STIXTwoText.ttf') format('truetype'),
+        url('../fonts/STIXTwoText.svg#STIXTwoText') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+

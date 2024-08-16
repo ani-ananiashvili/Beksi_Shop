@@ -1,6 +1,7 @@
 body {
-  background-color: rgb(0, 0, 0);
-  color: white;
+  background-color: #000;
+  color: #fff;
+  font-family: "STIX-Two-Text";
 }
 
 /* header section */
@@ -460,9 +461,7 @@ video {
 }
 
 .footerLists {
-  font-family: "Inter400";
   font-size: 18px;
-  font-weight: 400;
   line-height: 28.8px;
 }
 
@@ -472,7 +471,6 @@ video {
 }
 
 .footerNavigation ul li a h4 {
-  font-family: "CircularStd-700";
   font-size: 23px;
   line-height: 27.6px;
   position: relative;
@@ -787,8 +785,11 @@ div.gallery .item:hover img {
 /* blog page */
 
 .blogP {
-  margin: 100px 0px;
+  width: 100%;
+  justify-content: space-around;
+  margin: 100px 0px 20px;
   text-align: center;
+  padding: 30px;
 }
 
 .blogP h1 {
@@ -833,7 +834,7 @@ div.gallery .item:hover img {
   justify-content: center;
   display: flex;
   gap: 15px;
-  margin: 40px 0px;
+  margin: 40px 0;
 }
 
 #showMoreButton {
@@ -845,6 +846,17 @@ div.gallery .item:hover img {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
+}
+
+/* blog responsive */
+
+@media (max-width: 425px) {
+  .blogP h2 {
+    font-size: 24px;
+  }
+  .blogP p {
+    font-size: 17px;
+  }
 }
 
 /* About page */
@@ -863,7 +875,7 @@ div.gallery .item:hover img {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding:10px;
+  padding: 10px;
 }
 
 .aboutUs h1 {
@@ -908,19 +920,17 @@ div.gallery .item:hover img {
 }
 
 @media (max-width: 630px) {
+  .aboutImg {
+    width: 100%;
+  }
 
-.aboutImg {
-  width: 100%;
-}
-
-.aboutImg img {
-  width: 100%;
-}
+  .aboutImg img {
+    width: 100%;
+  }
 }
 
 @media (max-width: 425px) {
-
-.aboutUs p {
-  font-size: 17px;
-}
+  .aboutUs p {
+    font-size: 17px;
+  }
 }
