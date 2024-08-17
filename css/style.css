@@ -634,7 +634,7 @@ div.gallery {
 div.gallery .item {
   position: relative;
   margin: 4px;
-  width: calc(33.33% -8px);
+  width: calc(33.33% - 8px); 
   overflow: hidden;
   cursor: pointer;
 }
@@ -688,7 +688,7 @@ div.gallery .item:hover img {
 
 @media (max-width: 1024px) {
   div.gallery .item {
-    width: calc(50% -8px);
+    width: calc(50% - 8px); 
   }
 }
 
