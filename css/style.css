@@ -368,7 +368,6 @@ video {
   display: flex;
   flex-direction: column;
   gap: 20px;
-
 }
 
 .categoriesImages {
@@ -634,7 +633,8 @@ div.gallery {
 div.gallery .item {
   position: relative;
   margin: 4px;
-  width: calc(33.33% - 8px); 
+  display: flex;
+  justify-content: center;
   overflow: hidden;
   cursor: pointer;
 }
@@ -684,21 +684,6 @@ div.gallery .item:hover img {
   color: #000;
 }
 
-/* categories page responsive */
-
-@media (max-width: 1024px) {
-  div.gallery .item {
-    width: calc(50% - 8px); 
-  }
-}
-
-@media (max-width: 600px) {
-  div.gallery .item {
-    width: 100%;
-    margin: 4px 0px;
-  }
-}
-
 .show-more {
   display: block;
   margin: 20px auto;
@@ -733,7 +718,7 @@ div.gallery .item:hover img {
 .modal-content {
   position: relative;
   background-color: #000;
-  margin: 6.5% auto;
+  margin: 6% auto;
   padding: 40px;
   border: 1px solid #888;
   max-width: 400px;
@@ -784,7 +769,13 @@ div.gallery .item:hover img {
   cursor: pointer;
 }
 
-/* categories modal responsive */
+/* categories page responsive */
+
+@media (max-width: 600px) {
+  div.gallery .item {
+    width: 100%;
+  }
+}
 
 @media (max-width: 425px) {
   .modal-content {
