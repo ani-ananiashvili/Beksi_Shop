@@ -45,108 +45,114 @@ document.addEventListener("click", (event) => {
 
 // registration
 
-const registrationIcon = document.getElementById("registrationIcon");
-const tooltip = registrationIcon.querySelector(".tooltip");
-const registrationOverlay = document.getElementById("registrationOverlay");
-const closeFormButton = document.getElementById("closeForm");
-const video = document.getElementById("lightningVideo");
+document.addEventListener("DOMContentLoaded", () => {
+  const registrationIcon = document.querySelector("#registrationIcon");
+  const tooltip = registrationIcon.querySelector(".tooltip");
+  const registrationOverlay = document.querySelector("#registrationOverlay");
+  const closeFormButton = document.querySelector("#closeForm");
+  const video = document.querySelector("#lightningVideo");
+  const registrationForm = document.querySelector("#registrationForm");
+  const emailInput = document.querySelector("#email");
+  const passwordInput = document.querySelector("#password");
+  const togglePassword = document.querySelector("#togglePassword");
+  const emailError = document.querySelector("#emailError");
+  const passwordError = document.querySelector("#passwordError");
 
-registrationIcon.addEventListener("mouseover", () => {
-  tooltip.style.display = "block";
-});
+  registrationIcon.addEventListener("mouseover", () => {
+    tooltip.style.display = "block";
+  });
 
-registrationIcon.addEventListener("mouseout", () => {
-  tooltip.style.display = "none";
-});
+  registrationIcon.addEventListener("mouseout", () => {
+    tooltip.style.display = "none";
+  });
 
-registrationIcon.addEventListener("click", (e) => {
-  e.preventDefault();
-  clearRegistrationFields();
-  registrationOverlay.classList.add("active");
-  video.pause();
-});
-
-function clearRegistrationFields() {
-  document.getElementById("email").value = "";
-  document.getElementById("password").value = "";
-  document.getElementById("emailError").textContent = "";
-  document.getElementById("passwordError").textContent = "";
-}
-
-closeFormButton.addEventListener("click", () => {
-  registrationOverlay.classList.remove("active");
-  video.play();
-});
-
-const registrationForm = document.getElementById("registrationForm");
-
-registrationForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
-
-  let valid = true;
-
-  document.getElementById("emailError").textContent = "";
-  document.getElementById("passwordError").textContent = "";
-
-  if (!emailRegex.test(email)) {
-    document.getElementById("emailError").textContent =
-      "Please enter a valid email address.";
-    valid = false;
-    document.getElementById("email").focus();
-  }
-
-  if (!passwordRegex.test(password)) {
-    document.getElementById("passwordError").textContent =
-      "Password must be at least 6 characters long and contain at least one letter and one number.";
-    valid = false;
-    if (valid) {
-      document.getElementById("password").focus();
-    }
-  }
-
-  if (valid) {
-    alert("Registration successful!");
+  registrationIcon.addEventListener("click", (e) => {
+    e.preventDefault();
     clearRegistrationFields();
+    registrationOverlay.classList.add("active");
+    video.pause();
+  });
+
+  closeFormButton.addEventListener("click", () => {
     registrationOverlay.classList.remove("active");
     video.play();
-  }
-});
+  });
 
-document.getElementById("email").addEventListener("input", () => {
-  document.getElementById("emailError").textContent = "";
-});
-
-document.getElementById("password").addEventListener("input", () => {
-  document.getElementById("passwordError").textContent = "";
-});
-
-document.getElementById("email").addEventListener("keydown", (event) => {
-  if (event.key === "Enter") {
+  registrationForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    document.getElementById("password").focus();
+    const email = emailInput.value;
+    const password = passwordInput.value;
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+
+    let valid = true;
+
+    emailError.textContent = "";
+    passwordError.textContent = "";
+
+    if (!emailRegex.test(email)) {
+      emailError.textContent = "Please enter a valid email address.";
+      valid = false;
+      emailInput.focus();
+    }
+
+    if (!passwordRegex.test(password)) {
+      passwordError.textContent =
+        "Password must be at least 6 characters long and contain at least one letter and one number.";
+      valid = false;
+      if (valid) {
+        passwordInput.focus();
+      }
+    }
+
+    if (valid) {
+      alert("Registration successful!");
+      clearRegistrationFields();
+      registrationOverlay.classList.remove("active");
+      video.play();
+    }
+  });
+
+  emailInput.addEventListener("input", () => {
+    emailError.textContent = "";
+  });
+
+  passwordInput.addEventListener("input", () => {
+    passwordError.textContent = "";
+  });
+
+  emailInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      passwordInput.focus();
+    }
+  });
+
+  passwordInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      registrationForm.dispatchEvent(new Event("submit"));
+    }
+  });
+
+  togglePassword.addEventListener("click", () => {
+    const type =
+      passwordInput.getAttribute("type") === "password" ? "text" : "password";
+    passwordInput.setAttribute("type", type);
+
+    togglePassword.classList.toggle("fa-eye");
+    togglePassword.classList.toggle("fa-eye-slash");
+  });
+
+  togglePassword.classList.add("fa-eye-slash");
+
+  function clearRegistrationFields() {
+    emailInput.value = "";
+    passwordInput.value = "";
+    emailError.textContent = "";
+    passwordError.textContent = "";
   }
 });
-
-document.getElementById("password").addEventListener("keydown", (event) => {
-  if (event.key === "Enter") {
-    registrationForm.dispatchEvent(new Event("submit"));
-  }
-});
-
-document.getElementById("togglePassword").addEventListener("click", function () {
-  const passwordField = document.getElementById("password");
-  const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
-  passwordField.setAttribute("type", type);
-  
-  this.classList.toggle('fa-eye-slash');
-  this.classList.toggle('fa-eye');
-});
-
 
 // Lighting animation & Search form function
 
