@@ -31,6 +31,10 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/fonts.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -115,13 +119,18 @@
           <form id="registrationForm" novalidate>
             <input type="email" id="email" placeholder="Email" required />
             <span class="error-message" id="emailError"></span>
-            <input
-              type="password"
-              id="password"
-              placeholder="Password"
-              required
-            />
+
+            <div class="password-container">
+              <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                required
+              />
+              <i id="togglePassword" class="eye-icon"></i>
+            </div>
             <span class="error-message" id="passwordError"></span>
+
             <button type="submit" class="signUp">SIGN UP</button>
           </form>
         </div>

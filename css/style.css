@@ -373,6 +373,28 @@ a {
   margin-top: 5px;
 }
 
+.password-container {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #a4250b;
+}
+
+.eye-icon::before {
+  content: "\f06e";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
 /* lighting animation & search */
 
 .video-container {
