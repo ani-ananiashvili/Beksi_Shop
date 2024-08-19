@@ -1,14 +1,5 @@
 "use strict";
 
-// site opening time with animation
-
-document.addEventListener('DOMContentLoaded', () => {
-  const body = document.body;
-  setTimeout(() => {
-    body.classList.add('visible');
-  }, 100); 
-});
-
 // header section
 
 const hamburger = document.querySelector(".hamburger");
